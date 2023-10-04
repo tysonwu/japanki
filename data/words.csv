@@ -11,11 +11,11 @@ order,hiragana,kanji,meaning,category,example,romaji
 9,～がわ,,... side,unit,ひだりがわを あるきます。Walk on the left side.,~ gawa
 10,～キロ,,... kg =,unit,"1キロ、2キロ、3キロ・・・  1 kg, 2 kg, 3 kg ...",~ kiro
 11,～キロ,,... km = キロメートル,unit,10キロぐらい はしりました。I ran about 10 km.,~ kiro
-12,～くらい/ぐらい,,about ...,atomic,2じかんぐらい べんきょうしました。I studied for about 2 hours.,~ kurai/gurai
+12,～くらい/ぐらい,,about ...,time,2じかんぐらい べんきょうしました。I studied for about 2 hours.,~ kurai/gurai
 13,～グラム,,... gram,unit,"1グラム、2グラム、3グラム・・・  1 gram, 2 gram, 3 gram ...",~ Guramu
 14,～こ,,counter for small object,unit,"いっこ、にこ、さんこ・・・  1, 2, 3 (small objects) ...",~ ko
 15,～ご,～語,... language,unit,"にほん語、えい語、ちゅうごく語・・・ Japanese, English, Chinese ...",~ go
-16,～ごろ,,around ... (for time),atomic,2じごろに そちらに いきます。I will go there around 2 o'clock.,~ goro
+16,～ごろ,,around ... (for time),time,2じごろに そちらに いきます。I will go there around 2 o'clock.,~ goro
 17,～さい,,... year(s) old,unit,"いっさい、にさい、さんさい・・・ 1 year old, 2 years old, 3 years old ...",~ sai
 18,～さつ,,counter for book,unit,"いっさつ、にさつ、さんさつ・・・ 1 book, 2 books, 3 books ...",~ satsu
 19,～さん,,"Mr., Mrs., Miss",atomic,"すずきさん、さとうさん・・・  Mr. Suzuki, Ms. Sato",~san
@@ -23,12 +23,12 @@ order,hiragana,kanji,meaning,category,example,romaji
 21,～じかん,～時間,... hour(s),unit,"1時間、2時間、3時間・・・1 hour, 2 hours, 3 hours ...",~ jikan
 22,～しゅうかん,～週間,(for) ... week(s),unit,"1週間、2週間、3週間・・・  1 week, 2 weeks, 3 weeks ...",~ shuukan
 23,～じん,～人,"...an, ...ese",unit,"にほん人、アメリカ人、ドイツ人・・・ Japanese, American, German ...",~ jin
-24,～すぎ,,"past, over",atomic,2じすぎに とうきょうに つきます。I will arrive in Tokyo after 2 o'clock.,~ sugi
+24,～すぎ,,"past, over",time,2じすぎに とうきょうに つきます。I will arrive in Tokyo after 2 o'clock.,~ sugi
 25,～ずつ,,... each,atomic,これと これを ２つずつ ください。Please give me two of this and two of this.,~ zutsu
-26,～せんせい,～先生,teacher,atomic,すずき先生は どこに いますか。Where is Teacher Suzuki?,~ sensei
+26,～せんせい,～先生,teacher,people,すずき先生は どこに いますか。Where is Teacher Suzuki?,~ sensei
 27,～だい,,counter for machine,unit,"いちだい、にだい、さんだい・・・ one, two three (machines)",~ da i
 28,～たち,,"...s, ... and others",atomic,"わたしたち、こどもたち、あのひとたち。We, Children, Those people",~ tachi
-29,～ちゅう,～中,"be in middle of ..., (during) in ...",atomic,いま かいぎ中です。I'm in a meeting now.,~ chuu
+29,～ちゅう,～中,"be in middle of ..., (during) in ...",time,いま かいぎ中です。I'm in a meeting now.,~ chuu
 30,～つ,,counter for object,unit,コーヒーを 3つ ください。Please give me three coffees.,~ tsu
 31,～ど,,... time(s),unit,もういちど いってください。Please say that again.,~do
 32,～にち,～日,"...st, ...nd, ...th",unit,きょうは 12日です。Today is the 12th.,~ nichi
@@ -44,57 +44,57 @@ order,hiragana,kanji,meaning,category,example,romaji
 42,～まい,,counter for thin object,unit,かみを １まい ください。Please give me a piece of paper.,~ Mai
 43,～まえ,～前,... ago,unit,2ねん前に にほんに きました。I came to Japan two years ago. before ... レッスンの 前に トイレに いきます。Go to the bathroom before the lesson.,~ mae
 44,～メートル,,... meter,unit,"１メートル、1.5メートル、２メートル  1 meter, 1.5 meters, 2 meters",~ meetoru
-45,～や,,"... store, ... shop",atomic,"すしや、さかなや、にくや、ケーキや...  Sushi shop, Fish shop, Butcher shop, Cake shop ...",~ ya
+45,～や,,"... store, ... shop",places,"すしや、さかなや、にくや、ケーキや...  Sushi shop, Fish shop, Butcher shop, Cake shop ...",~ ya
 46,あいます,会います,"see (a person), meet",verb,ともだちに/と 会います。I will see my friend.,Aimasu
-47,あおい,,blue [i-adj.],adj,あおいボールペン。Blue ballpoint pen,Aoi
+47,あおい,,blue [i-adj.],adjadv,あおいボールペン。Blue ballpoint pen,Aoi
 48,あか,赤,red [noun],color,赤で かきます。Write in red.,Aka
-49,あかい,赤い,red [i-adj.],adj,赤いボールペン  Red ballpoint pen,Akai
+49,あかい,赤い,red [i-adj.],adjadv,赤いボールペン  Red ballpoint pen,Akai
 50,あがります,,go up,direction,エレベーターで 15かいに あがります。Take the elevator to the 15th floor.,Agarimasu
-51,あかるい,,"bright, light [i-adj.]",adj,このへやは あかるいです。The room is bright.,Akarui
+51,あかるい,,"bright, light [i-adj.]",adjadv,このへやは あかるいです。The room is bright.,Akarui
 52,あき,,"autumn, fall",nature,あきが すきです。I like autumn.,Aki
 53,あきます,,open,verb,ドアが あきます。The door opens.,Akimasu
 54,あけます,,open,verb,わたしは ドアをあけます。I open the door.,Akemasu
 55,あげます,,give,verb,ははの たんじょうびに プレゼントを あげました。I gave a present on my mother's birthday.,Agemasu
 56,あさ,朝,morning,time,あしたの 朝は 6じに おきます。 I will get up at 6 o'clock tomorrow morning.,Asa
-57,あさごはん,朝ごはん,breakfast,obj,もう 朝ごはんを たべましたか。 Have you eaten breakfast yet?,Asagohan
+57,あさごはん,朝ごはん,breakfast,food,もう 朝ごはんを たべましたか。 Have you eaten breakfast yet?,Asagohan
 58,あさって,,the day after tomorrow,time,あさっては にほんごの テストです。The day after tomorrow will be a Japanese test.,Asatte
 59,あし,足,"leg, foot",body,かのじょは足が ながいです。 She has long legs.,Ashi
 60,あした,,tomorrow,time,では、また あした。See you tomorrow.,Ashita
 61,あそこ,,over there,direction,あそこで バスに のります。Get on the bus over there.,Asoko
 62,あそびます,,play,verb,こどもは よく こうえんで あそびます。Children often play in the park.,Asobimasu
-63,あたたかい,,warm [i-adj.],adj,きょうは きのうより あたたかいです。Today is warmer than yesterday.,Atatakai
+63,あたたかい,,warm [i-adj.],adjadv,きょうは きのうより あたたかいです。Today is warmer than yesterday.,Atatakai
 64,あたま,,head,body,かれは とても あたまが いいです。He is very smart.,Atama
-65,あたらしい,新しい,new [i-adj.],adj,新しい コンピュータを かいました。I bought a new computer.,Atarashii
+65,あたらしい,新しい,new [i-adj.],adjadv,新しい コンピュータを かいました。I bought a new computer.,Atarashii
 66,あちら,,over there 「あそこ」の more polite,direction,いりぐちは あちらです。The entrance is over there.,Achira
-67,あつい,,hot [i-adj.],adj,きょうは あついですね。It's hot today.,Atsui
-68,あつい,,thick [i-adj.],adj,このほんは あついです。This book is thick.,Atsui
+67,あつい,,hot [i-adj.],adjadv,きょうは あついですね。It's hot today.,Atsui
+68,あつい,,thick [i-adj.],adjadv,このほんは あついです。This book is thick.,Atsui
 69,あと(で),後(で),after,time,あさごはんの 後で さんぽをします。I will take a walk after breakfast.,Ato (de)
 70,あに,,(my) older brother,people,あには イギリスに います。My brother is in England.,A ni
 71,あね,,(my) older sister,people,あねは フランスに います。My sister is in France.,A ne
 72,あの～,,that ...,atomic,あのひとは だれですか。Who is that person?,Ano~
-73,アパート,,apartment,obj,わたしは ふるいアパートにすんでいます。I live in an old apartment.,Apaato
+73,アパート,,apartment,places,わたしは ふるいアパートにすんでいます。I live in an old apartment.,Apaato
 74,あびます,,take (a shower),verb,あさ シャワーを あびます。 Take a shower in the morning.,Abimasu
-75,あぶない,,dangerous [i-adj.],adj,ここは あぶないですよ。It's dangerous here.,Abunai
-76,あまい,,sweet [i-adj.],adj,このケーキは とても あまいです。This cake is very sweet.,Amai
+75,あぶない,,dangerous [i-adj.],adjadv,ここは あぶないですよ。It's dangerous here.,Abunai
+76,あまい,,sweet [i-adj.],adjadv,このケーキは とても あまいです。This cake is very sweet.,Amai
 77,あまり,,not much ...,atomic,あまり ほんを よみません。I don't read many books.,Amari
 78,あめ,雨,rain,nature,ごごは たぶん 雨が ふります。It will probably rain in the afternoon.,Ame
-79,アメリカ,,The United States of America,obj,あには アメリカに いきました。My brother went to America.,Amerika
+79,アメリカ,,The United States of America,places,あには アメリカに いきました。My brother went to America.,Amerika
 80,あらいます,,wash,verb,ここで てを あらいます。 Wash your hands here.,Araimasu
 81,あります,,be [existence],atomic,はこの なかに りんごが ななつ あります。There are seven apples in the box.,Arimasu
 82,あります,,have [possession],atomic,わたしは きょう じかんが あります。I have time today.,Arimasu
 83,あるきます,歩きます,walk,verb,きのうは オフィスから うちまで あるきました。I walked from the office to my house yesterday.,Arukimasu
 84,あれ,,that (one),atomic,あれは なんですか。What is that?,Are
-85,いい,,good [i-adj.],adj,この アプリは とても いいです。This app is very nice.,Ii
+85,いい,,good [i-adj.],adjadv,この アプリは とても いいです。This app is very nice.,Ii
 86,いいます,言います,"say, tell",verb,もういちど 言います。I will say it again.,Iimasu
-87,いえ,家,house,obj,家の なかは あたたかいです。The inside of the house is warm.,Ie
+87,いえ,家,house,places,家の なかは あたたかいです。The inside of the house is warm.,Ie
 88,いきます,行きます,go,verb,じてんしゃで がっこうに 行きます。I go to school by bicycle.,Ikimasu
 89,いくつ,,"how many, how old",atomic,れいぞうこの なかに たまごが いくつ ありますか。How many eggs are there in the fridge?,Ikutsu
 90,いくら,,how much,atomic,これは いくらですか。How much is this?,Ikura
-91,いけ,,pond,obj,いけの なかに きれいな さかなが います。There are beautiful fish in the pond.,Ike
+91,いけ,,pond,nature,いけの なかに きれいな さかなが います。There are beautiful fish in the pond.,Ike
 92,いしゃ,,doctor = おいしゃさん。,people,ちちは いしゃです。My father is a doctor.,Isha
-93,いす,,chair,obj,このいすは たかかったです。This chair was expensive.,Isu
-94,いそがしい,,busy [i-adj.],adj,このごろ まいにち いそがしいです。I'm busy these days.,Isogashii
-95,いたい,,be painful [i-adj.],adj,きょうは すこし あたまが いたいです。I have a slight headache today.,Itai
+93,いす,,chair,home,このいすは たかかったです。This chair was expensive.,Isu
+94,いそがしい,,busy [i-adj.],adjadv,このごろ まいにち いそがしいです。I'm busy these days.,Isogashii
+95,いたい,,be painful [i-adj.],adjadv,きょうは すこし あたまが いたいです。I have a slight headache today.,Itai
 96,いち,一,one,unit,"いち、に、さん、し、ご・・・one, two, three, four, five...",Ichi
 97,いちど,一ど,once,unit,もう一ど いってください。Say that once more please.,Ichi do
 98,いちにち,一日,one day,unit,きのうは 一日 うちに いました。I was at home all day yesterday.,Ichi nichi
@@ -106,60 +106,60 @@ order,hiragana,kanji,meaning,category,example,romaji
 104,いつも,,always,atomic,いつも けいたいでんわをもっています。I always have a mobile phone.,Itsu mo
 105,いま,今,now,time,今 なんじですか。What time is it now?,Ima
 106,います,,be (existence),atomic,"わたしは いま いえに います。I'm at home now. have (family), わたしは きょうだいが います。I have a sibling.",Imasu
-107,いみ,,meaning,obj,おなじ いみのぶんは どれですか。Which sentences have the same meaning?,Imi
+107,いみ,,meaning,intangible,おなじ いみのぶんは どれですか。Which sentences have the same meaning?,Imi
 108,いもうと,,(my) younger sister,people,いもうとは いま いえに いません。My sister isn't at home right now.,Imouto
 109,いもうとさん,,(someone's) younger sister,people,いもうとさんは どこに いますか。Where is your sister?,Imoutosan
-110,いや,,"hateful, not likable, unpleasant [na-adj.]",adj,いやな しごとも あります。There are also unpleasant jobs.,Iya
+110,いや,,"hateful, not likable, unpleasant [na-adj.]",adjadv,いやな しごとも あります。There are also unpleasant jobs.,Iya
 111,いりぐち,入口,entrance,direction,入口は どこですか。Where is the entrance?,Iriguchi
 112,いります,,"be necessary, must have, need",atomic,ふくろは  いりません。I do not need a bag.,Irimasu
 113,いれます,入れます,put in,verb,コーヒーに クリームを 入れますか。Would you like to add cream to your coffee?,Iremasu
 114,いろ,,color,color,どんな いろが すきですか。What kind of color do you like?,Iro
-115,いろいろ,,various [na-adj.],adj,この ビルの なかには いろいろな みせが あります。There are various shops in this building.,Iroiro
+115,いろいろ,,various [na-adj.],adjadv,この ビルの なかには いろいろな みせが あります。There are various shops in this building.,Iroiro
 116,うえ,上,"on, above, top",direction,めがねは つくえの 上に あります。The glasses are on the desk.,Ue
 117,うしろ,後ろ,"back, behind",direction,モニターの 後ろに スイッチが あります。There is a switch on the back of the monitor.,Ushiro
-118,うすい,,thin [i-adj.],adj,このほんは うすいです。This book is thin.,Usui
-119,うた,,song,obj,これは いい うたですね。 This is a good song.,Uta
+118,うすい,,thin [i-adj.],adjadv,このほんは うすいです。This book is thin.,Usui
+119,うた,,song,activity,これは いい うたですね。 This is a good song.,Uta
 120,うたいます,,sing,verb,カラオケで にほんごの うたを うたいました。I sang a Japanese song at karaoke.,Utaimasu
-121,うち,,home,obj,うちは どこですか。Where is your home?,Uchi
+121,うち,,home,places,うちは どこですか。Where is your home?,Uchi
 122,うまれます,生まれます,be born,verb,"せんげつ あかちゃんが 生まれました。Last month, a baby was born.",Umaremasu
-123,うみ,,sea,obj,やまより うみが すきです。I like the sea better than the mountains.,Umi
+123,うみ,,sea,nature,やまより うみが すきです。I like the sea better than the mountains.,Umi
 124,うります,,sell,verb,Amazonで うっています。It is sold on Amazon.,Urimasu
-125,うるさい,,loud [i-adj.],adj,ちかてつの なかは うるさいです。It's noisy in the subway.,Urusai
-126,うれしい,,"happy, pleased [i-adj.]",adj,とても うれしいです。I am very happy.,Ureshii
-127,うわぎ,,"coat, jacket, outerwear",obj,みせに うわぎを わすれました。I forgot my jacket at the store.,Uwa gi
-128,え,,"drawing, picture, painting",obj,かのじょは えが じょうずです。She is good at painting.,E
-129,エアコン,,air conditioner,obj,わたしの うちには エアコンが ５だい あります。There are 5 air conditioners in my house.,Eakon
-130,えいが,,movie,obj,きのう ともだちと えいがを みました。I watched a movie with my friends yesterday.,Eiga
-131,えいがかん,,movie theater,obj,あたらしい えいがかんに いきました。I went to a new movie theater.,Eigakan
-132,えいご,,English,obj,えいごで はなしても いいですか。May I speak in English?,Eigo
-133,えき,駅,station,obj,うちから 駅まで 5ふんぐらいです。It takes about 5 minutes from our house to the station.,Eki
+125,うるさい,,loud [i-adj.],adjadv,ちかてつの なかは うるさいです。It's noisy in the subway.,Urusai
+126,うれしい,,"happy, pleased [i-adj.]",adjadv,とても うれしいです。I am very happy.,Ureshii
+127,うわぎ,,"coat, jacket, outerwear",wearables,みせに うわぎを わすれました。I forgot my jacket at the store.,Uwa gi
+128,え,,"drawing, picture, painting",activity,かのじょは えが じょうずです。She is good at painting.,E
+129,エアコン,,air conditioner,home,わたしの うちには エアコンが ５だい あります。There are 5 air conditioners in my house.,Eakon
+130,えいが,,movie,activity,きのう ともだちと えいがを みました。I watched a movie with my friends yesterday.,Eiga
+131,えいがかん,,movie theater,places,あたらしい えいがかんに いきました。I went to a new movie theater.,Eigakan
+132,えいご,,English,intangible,えいごで はなしても いいですか。May I speak in English?,Eigo
+133,えき,駅,station,places,うちから 駅まで 5ふんぐらいです。It takes about 5 minutes from our house to the station.,Eki
 134,えらびます,,choose,verb,いちばん いいものを えらびます。Choose the best one.,Erabimasu
-135,エレベーター,,"elevator, lift",obj,エレベーターは どこに ありますか。Where is the elevator?,Erebeetaa
-136,えんぴつ,,pencil,obj,えんぴつで かいても いいですか。Can I write it in pencil?,Enpitsu
+135,エレベーター,,"elevator, lift",man made,エレベーターは どこに ありますか。Where is the elevator?,Erebeetaa
+136,えんぴつ,,pencil,stationery,えんぴつで かいても いいですか。Can I write it in pencil?,Enpitsu
 137,お～,,[polite prefix],atomic,おくに。おかね。おしごと。おでんわ。Country. Money. Job. Phone.,O~
-138,おいしい,,"delicious, good, tasty [i-adj.]",adj,このみせの ラーメンは おいしいです。The ramen in this shop is delicious.,Oishii
+138,おいしい,,"delicious, good, tasty [i-adj.]",adjadv,このみせの ラーメンは おいしいです。The ramen in this shop is delicious.,Oishii
 139,おいでになります,,"come, go, be [respect]",verb,あしたは なんじに おいでになりますか。What time will you come tomorrow?,Oide ni narimasu
-140,おおい,多い,a lot of [i-adj.],adj,このホテルは へやが 多いです。This hotel has many rooms.,Ooi
-141,おおきい,大きい,big [i-adj.],adj,大きい くるまを かいたいです。I want to buy a big car.,Ookii
+140,おおい,多い,a lot of [i-adj.],adjadv,このホテルは へやが 多いです。This hotel has many rooms.,Ooi
+141,おおきい,大きい,big [i-adj.],adjadv,大きい くるまを かいたいです。I want to buy a big car.,Ookii
 142,おおきな,大きな,big 大きな[noun] = 大きい[noun],unit,大きな ショッピングモールにいきました。I went to a big shopping mall.,Ookina
 143,おおぜい,,"many (people), a great number of (people)",unit,えきの まえに ひとが おおぜい います。There are a lot of people in front of the station.,Oozei
 144,おかあさん,お母さん,(someone's) mother,people,かれの お母さんは にほんじんです。His mom is Japanese.,Okaasan
-145,おかし,,"confectionery, cake, candy, sweets",obj,にほんの おかしが すきです。I like Japanese sweets.,Okashi
-146,おかね,お金,money,obj,お金は たいせつです。Money is important.,Oka ne
+145,おかし,,"confectionery, cake, candy, sweets",food,にほんの おかしが すきです。I like Japanese sweets.,Okashi
+146,おかね,お金,money,man made,お金は たいせつです。Money is important.,Oka ne
 147,おきます,,put (Group 1 verb),verb,バッグを テーブルの したに おきます。Place the bag under the table.,Okimasu
 148,おきます,,get up (Group 2 verb),verb,まいにち 7じに おきます。It wakes up at 7 o'clock every day.,Okimasu
 149,おくさん,,(someone's) wife,people,かれの おくさんは とても きれいです。His wife is very pretty.,Okusan
-150,おくに,お国,country = くに。,obj,お国は どちらですか。Where is your country?,Okuni
+150,おくに,お国,country = くに。,places,お国は どちらですか。Where is your country?,Okuni
 151,おくります,,send,verb,メールで データを おくります。We will send you the data by email.,Okurimasu
-152,おさけ,,"liquor, (alcoholic) drink, sake",obj,ときどき おさけを のみます。I drink alcohol sometimes.,Osake
-153,おさら,,plate = さら。,obj,おおきい おさらを 5まい かいました。I bought 5 large plates.,Osara
+152,おさけ,,"liquor, (alcoholic) drink, sake",food,ときどき おさけを のみます。I drink alcohol sometimes.,Osake
+153,おさら,,plate = さら。,home,おおきい おさらを 5まい かいました。I bought 5 large plates.,Osara
 154,おじさん,,uncle,people,おじさんは いつ にほんに きますか。When will your uncle come to Japan?,Ojisan
 155,おじいさん,,grandfather,people,かれの おじいさんは いま カナダに います。His grandfather is now in Canada.,Ojiisan
 156,おしえます,,"teach, tell",verb,ともだちに えいごを おしえます。I will teach English to my friends.,Oshiemasu
-157,おそい,,late [i-adj.],adj,"きょうは おそいですね。You are late today, aren't you?",Osoi
-158,おそく,,late [noun],adj,きのうは おそくまで しごとを しました。I worked late yesterday.,Osoku
-159,おちゃ,,tea,obj,おちゃを のみませんか。Would you like to have a cup of tea?,Ocha
-160,おてあらい,,"lavatory, toilet",obj,おてあらいは どこですか。Where is the restroom?,Otearai
+157,おそい,,late [i-adj.],adjadv,"きょうは おそいですね。You are late today, aren't you?",Osoi
+158,おそく,,late [noun],adjadv,きのうは おそくまで しごとを しました。I worked late yesterday.,Osoku
+159,おちゃ,,tea,food,おちゃを のみませんか。Would you like to have a cup of tea?,Ocha
+160,おてあらい,,"lavatory, toilet",home,おてあらいは どこですか。Where is the restroom?,Otearai
 161,おとうさん,お父さん,(someone's) father,people,お父さんは なんさいですか。How old is your father?,Otousan
 162,おとうと,,(my) younger brother,people,おとうとは がくせいです。My younger brother is a student.,Otouto
 163,おとうとさん,,(someone's) younger brother,people,おとうとさんは なんさいですか。How old is your younger brother?,Otoutosan
@@ -171,223 +171,223 @@ order,hiragana,kanji,meaning,category,example,romaji
 169,おなか,,stomach,body,おなかが すきました。I'm hungry.,Onaka
 170,おなじ,,same,unit,おなじ いみの ぶんは どれですか。Which sentences have the same meaning?,Onaji
 171,おにいさん,,(someone's) older brother,people,おにいさんは にほんに いますか。Is your brother in Japan?,Oniisan
-172,おにぎり,,rice ball,obj,コンビニで おにぎりを ふたつ かいました。I bought two rice balls at a convenience store.,Onigiri
+172,おにぎり,,rice ball,food,コンビニで おにぎりを ふたつ かいました。I bought two rice balls at a convenience store.,Onigiri
 173,おねえさん,,(someone's) older sister,people,おねえさんは なにを していますか。What is your sister doing?,Oneesan
 174,おばさん,,aunt,people,おばさんは いつ にほんに きますか。When will your aunt come to Japan?,Obasan
 175,おばあさん,,grandmother,people,おばあさんは なんさいですか。How old is your grandmother?,Obaasan
-176,おべんとう,,lunch box,obj,おべんとうを つくります。I will make a lunch box.,Obentou
+176,おべんとう,,lunch box,food,おべんとうを つくります。I will make a lunch box.,Obentou
 177,おぼえます,,memorize,verb,アプリで あたらしい ことばを おぼえます。Learn new words in the app.,Oboemasu
-178,おみせ,お店,shop = みせ。,obj,えきの なかの お店で かいました。I bought it at a shop inside the station.,Omise
-179,おもい,,heavy [i-adj.],adj,このノートパソコンはおもいです。This laptop is heavy.,Omoi
-180,おもしろい,,"fun, funny, interesting [i-adj.]",adj,おもしろいえいがをみました。I watched an interesting movie.,Omoshiroi
+178,おみせ,お店,shop = みせ。,places,えきの なかの お店で かいました。I bought it at a shop inside the station.,Omise
+179,おもい,,heavy [i-adj.],adjadv,このノートパソコンはおもいです。This laptop is heavy.,Omoi
+180,おもしろい,,"fun, funny, interesting [i-adj.]",adjadv,おもしろいえいがをみました。I watched an interesting movie.,Omoshiroi
 181,およぎます,,swim,verb,まいしゅうまつ 500メートル およぎます。I swim 500 meters every weekend.,Oyogimasu
 182,おります,,get off,verb,つぎの えきで でんしゃを おります。Get off the train at the next station.,Orimasu
 183,おわります,,"end, finish",verb,かいぎは 3じに おわります。The meeting ends at 3 o'clock.,Owarimasu
-184,おんがく,,music,obj,おんがくが だいすきです。I love music.,Ongaku
+184,おんがく,,music,activity,おんがくが だいすきです。I love music.,Ongaku
 185,おんな,女,female,people,わたしのオフィスには女のひとが 6にん います。There are 6 women in my office.,Onna
 186,おんなのこ,女の子,girl,people,女の子が 3にん います。There are 3 girls.,Onnanoko
 187,か,火,Tuesday = かようび。,time,3がつ15にち（火）  March 15th (Tuesday),Ka
-188,がいこく,外国,foreign country,obj,外国に いきたいです。I want to go abroad.,Gaikoku
+188,がいこく,外国,foreign country,places,外国に いきたいです。I want to go abroad.,Gaikoku
 189,がいこくじん,外国人,foreigner,people,うちの かいしゃには外国人が おおぜい います。There are many foreigners in my company.,Gaikokujin
-190,かいしゃ,会社,company,obj,うちから 会社まで 40ぷんぐらいです。It's about 40 from our house to the company.,Ka isha
-191,かいだん,,stairs,obj,かいだんで いきましょう。Let's go up the stairs.,Kaidan
-192,かいとうようし,,answer sheet,obj,これは テストの かいとうようしです。This is the test answer sheet.,Kaitou youshi
+190,かいしゃ,会社,company,places,うちから 会社まで 40ぷんぐらいです。It's about 40 from our house to the company.,Ka isha
+191,かいだん,,stairs,home,かいだんで いきましょう。Let's go up the stairs.,Kaidan
+192,かいとうようし,,answer sheet,stationery,これは テストの かいとうようしです。This is the test answer sheet.,Kaitou youshi
 193,かいます,買います,buy,verb,おいしい パンを 買いました。I bought some delicious bread.,Kaimasu
 194,かいもの,買いもの,shopping,verb,くるまで 買いものに いきます。I'm going shopping by car.,Kaimono
 195,かえします,,return (object),verb,としょかんに ほんを かえします。Return the book to the library.,Kaeshimasu
 196,かえります,,"return, go back",verb,タクシーで うちに かえります。I'll take a taxi home.,Kaerimasu
 197,かお,,face,body,あのひとの かおを おぼえていますか。Do you remember that person's face?,Kao
 198,かかります,,"take (time, money)",verb,えきまで あるいて 10ぷん かかります。It takes 10 minutes on foot to the station.,Kakarimasu
-199,かぎ,,key,obj,うちに くるまの かぎを わすれました。I forgot my car key at home.,Kagi
-200,かきます,書きます,write,obj,えきまでの ちずを 書きましょうか。Shall I write a map to the station?,Kakimasu
+199,かぎ,,key,man made,うちに くるまの かぎを わすれました。I forgot my car key at home.,Kagi
+200,かきます,書きます,write,verb,えきまでの ちずを 書きましょうか。Shall I write a map to the station?,Kakimasu
 201,がくせい,学生,student,people,いもうとは まだ 学生です。My sister is still a student.,Gaku sei
 202,かけます,,wear,verb,めがねを かけます。I wear glasses.,Kakemasu
 203,かけます,,call,verb,あとで かいしゃに でんわを かけます。I'll call the company later.,Kakemasu
-204,かさ,,umbrella,obj,かさが ありますか。Do you have an umbrella?,Ka sa
+204,かさ,,umbrella,wearables,かさが ありますか。Do you have an umbrella?,Ka sa
 205,かします,,lend,verb,ペンを かしてください。Please lend a pen.,Ka shimasu
 206,かぜ,,wind,nature,きょうは とても かぜが つよいです。It's very windy today.,Kaze
-207,かぜ,,cold,adj,かぜを ひきました。I caught a cold.,Kaze
+207,かぜ,,cold,adjadv,かぜを ひきました。I caught a cold.,Kaze
 208,かぞく,,family,people,わたしの かぞくも とうきょうに すんでいます。My family also lives in Tokyo.,Kazoku
 209,かた,,person (respect),people,かいしゃのかたと はなしました。I talked to a person from the company.,Kata
-210,カタカナ,,katakana,obj,カタカナは むずかしくないです。Katakana is not difficult.,Katakana
-211,がっこう,学校,school,obj,あるいて 学校に いきます。I will walk to school.,Gakkou
-212,かど,,corner,obj,つぎの かどを みぎに まがります。Turn right at the next corner.,Ka do
+210,カタカナ,,katakana,intangible,カタカナは むずかしくないです。Katakana is not difficult.,Katakana
+211,がっこう,学校,school,places,あるいて 学校に いきます。I will walk to school.,Gakkou
+212,かど,,corner,places,つぎの かどを みぎに まがります。Turn right at the next corner.,Ka do
 213,かない,,(my) wife,people,かないは いま うちに います。My wife is at home now.,Kanai
-214,かばん,,bag,obj,かばんの なかに PCが あります。There is a PC in the bag.,Kaban
-215,かびん,,vase,obj,テーブルの うえに かびんが あります。There is a vase on the table.,Kabin
+214,かばん,,bag,wearables,かばんの なかに PCが あります。There is a PC in the bag.,Kaban
+215,かびん,,vase,man made,テーブルの うえに かびんが あります。There is a vase on the table.,Kabin
 216,かぶります,,put on,verb,ぼうしを かぶります。Put on a hat.,Kaburimasu
-217,かみ,紙,paper,obj,紙を 1まい ください。Please give me a piece of paper.,Kami
-218,カメラ,,camera,obj,あたらしい カメラを かいたいです。I want to buy a new camera.,Kamera
+217,かみ,紙,paper,stationery,紙を 1まい ください。Please give me a piece of paper.,Kami
+218,カメラ,,camera,man made,あたらしい カメラを かいたいです。I want to buy a new camera.,Kamera
 219,かようび,火よう日,Tuesday,time,きょうは 火よう日です。 Today is Tuesday.,Kayou bi
-220,からい,,"hot, spicy [i-adj.]",adj,からい たべものは だいじょうぶですか。Is spicy food okay?,Karai
+220,からい,,"hot, spicy [i-adj.]",adjadv,からい たべものは だいじょうぶですか。Is spicy food okay?,Karai
 221,からだ,,body,body,スポーツは からだに いいです。Sports are good for you.,Karada
 222,かります,,borrow,verb,ともだちに かさを かりました。I borrowed an umbrella from my friend.,Karimasu
-223,かるい,,"light, not heavy [i-adj.]",adj,このバッグは かるいです。This bag is light.,Karui
-224,カレンダー,,calendar,obj,これは きょねんの カレンダーです。This is last year's calendar.,Karendaa
-225,かわ,川,river,obj,おおきい川が あります。There is a big river.,Kawa
-226,かわいい,,"pretty, sweet, cute [i-adj.]",adj,こどもは かわいいです。Children are cute.,Kawaii
+223,かるい,,"light, not heavy [i-adj.]",adjadv,このバッグは かるいです。This bag is light.,Karui
+224,カレンダー,,calendar,stationery,これは きょねんの カレンダーです。This is last year's calendar.,Karendaa
+225,かわ,川,river,nature,おおきい川が あります。There is a big river.,Kawa
+226,かわいい,,"pretty, sweet, cute [i-adj.]",adjadv,こどもは かわいいです。Children are cute.,Kawaii
 227,かんがえます,,"consider, think",verb,いいアイデアを かんがえました。I came up with a good idea.,Kangaemasu
-228,かんじ,,kanji,obj,かんじの べんきょうを しています。I'm studying kanji.,Kanji
-229,かんたん,,easy [na-adj.],adj,このもんだいは かんたんです。This question is easy.,Kantan
-230,き,木,tree,obj,にわに おおきい 木が あります。There is a big tree in the garden.,Ki
-231,きいろい,,yellow [i-adj.],adj,きいろい マーカーで チェックします。Check with the yellow marker.,Kiiroi
+228,かんじ,,kanji,intangible,かんじの べんきょうを しています。I'm studying kanji.,Kanji
+229,かんたん,,easy [na-adj.],adjadv,このもんだいは かんたんです。This question is easy.,Kantan
+230,き,木,tree,nature,にわに おおきい 木が あります。There is a big tree in the garden.,Ki
+231,きいろい,,yellow [i-adj.],adjadv,きいろい マーカーで チェックします。Check with the yellow marker.,Kiiroi
 232,きえます,,"go out, go off",verb,でんきが きえました。The electricity has gone out.,Kiemasu
 233,ききます,聞きます,"ask, hear, listen",verb,イヤホンで おんがくを 聞きます。Listen to music with earphones.,Kikimasu
 234,きた,北,north,direction,北は どちらですか。Which direction is north?,Kita
-235,ギター,,guitar,obj,ギターの れんしゅうを しています。I'm practicing the guitar.,Gitaa
-236,きたない,,dirty [i-adj.],adj,このビルの トイレは きたないです。The toilet in this building is dirty.,Kitanai
-237,きっさてん,,coffee shop,obj,えきのまえに ふるい きっさてんが あります。There is an old coffee shop in front of the station.,Kissaten
-238,きって,,stamp,obj,ゆうびんきょくで きってを かいました。I bought a stamp at the post office.,Kitte
-239,きっぷ,,ticket,obj,これは しんかんせんの きっぷです。This is a Shinkansen ticket.,Kippu
+235,ギター,,guitar,man made,ギターの れんしゅうを しています。I'm practicing the guitar.,Gitaa
+236,きたない,,dirty [i-adj.],adjadv,このビルの トイレは きたないです。The toilet in this building is dirty.,Kitanai
+237,きっさてん,,coffee shop,places,えきのまえに ふるい きっさてんが あります。There is an old coffee shop in front of the station.,Kissaten
+238,きって,,stamp,stationery,ゆうびんきょくで きってを かいました。I bought a stamp at the post office.,Kitte
+239,きっぷ,,ticket,stationery,これは しんかんせんの きっぷです。This is a Shinkansen ticket.,Kippu
 240,きのう,,yesterday,time,きのう たくさん にほんごの べんきょうをしました。I studied a lot of Japanese yesterday.,Kinou
 241,きます,来ます,come,verb,"らいしゅう りょうしんが とうきょうに 来ます。Next week, my parents will come to Tokyo.",Kimasu
 242,きます,,"put on, wear",verb,"さむいですから、セーターをきます。It's cold, so I'll wear a sweater.",Kimasu
 243,きゅう,九,nine,unit,ほんを 九さつ かりました。I borrowed nine books.,Kyuu
-244,ぎゅうにく,,beef,obj,にほんで ぎゅうにくは たかいです。Beef is expensive in Japan.,Gyuuniku
-245,ぎゅうにゅう,,milk,obj,まいあさ ぎゅうにゅうを のみます。I drink milk every morning.,Gyuunyuu
+244,ぎゅうにく,,beef,food,にほんで ぎゅうにくは たかいです。Beef is expensive in Japan.,Gyuuniku
+245,ぎゅうにゅう,,milk,food,まいあさ ぎゅうにゅうを のみます。I drink milk every morning.,Gyuunyuu
 246,きょう,今日,today,time,"今日は いい てんきですね。It's nice weather today, isn't it?",Kyou
-247,きょうしつ,,classroom,obj,せんせいは きょうしつに います。The teacher is in the classroom.,Kyoushitsu
+247,きょうしつ,,classroom,places,せんせいは きょうしつに います。The teacher is in the classroom.,Kyoushitsu
 248,きょうだい,,brothers and sisters; siblings,people,きょうだいが いますか。Do you have any siblings?,Kyoudai
-249,きょうと,,Kyoto [name of city],obj,おととし きょうとに いきました。I went to Kyoto two years ago.,Kyou to
+249,きょうと,,Kyoto [name of city],intangible,おととし きょうとに いきました。I went to Kyoto two years ago.,Kyou to
 250,きょねん,,last year,time,"きょねん にほんごの べんきょうをはじめました。Last year, I started studying Japanese.",Kyonen
-251,きらい,,"hateful, unpleasant, not likable [na-adj.]",adj,なっとうが きらいです。I hate natto.,Kirai
+251,きらい,,"hateful, unpleasant, not likable [na-adj.]",adjadv,なっとうが きらいです。I hate natto.,Kirai
 252,きります,,cut,verb,やさいを きります。 Cut the vegetables.,Kirimasu
-253,きれい,,"beautiful, clean [na-adj.]",adj,このへやは きれいです。This room is clean.,Kirei
+253,きれい,,"beautiful, clean [na-adj.]",adjadv,このへやは きれいです。This room is clean.,Kirei
 254,きん,金,Friday = きんようび。,time,2がつ26にち（金）  February 26th (Friday),Kin
-255,ぎんこう,銀行,bank,obj,あとで 銀行に いきます。I will go to the bank later.,Ginkou
+255,ぎんこう,銀行,bank,places,あとで 銀行に いきます。I will go to the bank later.,Ginkou
 256,きんようび,金よう日,Friday,time,金よう日に あいましょう。Let's meet on Friday.,Kin youbi
 257,く,九,nine,unit,いま 九じです。It's nine o'clock now.,Ku
-258,くすり,,medicine,obj,しょくじの あとで くすりを のみます。Take medicine after meals.,Kusuri
-259,くだもの,,fruit,obj,よく くだものを たべます。I often eat fruits.,Kudamono
+258,くすり,,medicine,food,しょくじの あとで くすりを のみます。Take medicine after meals.,Kusuri
+259,くだもの,,fruit,food,よく くだものを たべます。I often eat fruits.,Kudamono
 260,くち,口,mouth,body,かれは 口が おおきいです。He has a big mouth.,Kuchi
-261,くつ,,shoes,obj,くつの サイズは いくつですか。What is the size of your shoes?,Kutsu
-262,くつした,くつ下,socks,obj,しろい くつ下を かいました。I bought white socks.,Kutsu shita
-263,くに,国,country,obj,"あした 国に かえります。Tomorrow, I will return to my country.",Kuni
-264,くもり,,cloudy weather,obj,きょうは くもりです。It's cloudy today.,Kumori
-265,くらい,,dark [i-adj.],adj,このへやは くらいです。This room is dark.,Kurai
-266,クラス,,class,obj,しゅうまつは ヨガの クラスに いきます。I go to yoga classes on weekends.,Kurasu
-267,くるま,車,car,obj,きょうは 車が おおいですね。There are many cars today.,Kuruma
+261,くつ,,shoes,wearables,くつの サイズは いくつですか。What is the size of your shoes?,Kutsu
+262,くつした,くつ下,socks,wearables,しろい くつ下を かいました。I bought white socks.,Kutsu shita
+263,くに,国,country,places,"あした 国に かえります。Tomorrow, I will return to my country.",Kuni
+264,くもり,,cloudy weather,nature,きょうは くもりです。It's cloudy today.,Kumori
+265,くらい,,dark [i-adj.],adjadv,このへやは くらいです。This room is dark.,Kurai
+266,クラス,,class,activity,しゅうまつは ヨガの クラスに いきます。I go to yoga classes on weekends.,Kurasu
+267,くるま,車,car,transport,きょうは 車が おおいですね。There are many cars today.,Kuruma
 268,くろ,,black [noun],color,くろで かきます。Write in black.,Kuro
-269,くろい,,black [i-adj.],adj,くろい バッグが 3つ あります。There are three black bags.,Kuroi
-270,くろく,,black [adv.],adv,くろく なりました。 It turned black.,Kuroku
-271,ケーキ,,cake,obj,このケーキを 4つ ください。Please give me four of these cakes.,Keeki
+269,くろい,,black [i-adj.],adjadv,くろい バッグが 3つ あります。There are three black bags.,Kuroi
+270,くろく,,black [adv.],adjadv,くろく なりました。 It turned black.,Kuroku
+271,ケーキ,,cake,food,このケーキを 4つ ください。Please give me four of these cakes.,Keeki
 272,けさ,今朝,this morning,time,今朝は ６じに おきました。I got up at 6 o'clock this morning.,Kesa
-273,けしゴム,,eraser,obj,けしゴムを かしてください。Please lend me an eraser.,Keshi gomu
+273,けしゴム,,eraser,stationery,けしゴムを かしてください。Please lend me an eraser.,Keshi gomu
 274,けします,,"switch off, turn off, erase",verb,でんきを けします。Turn off the light.,Keshimasu
 275,げつ,月,Monday = げつようび。,time,4がつ22にち（月）  April 22nd (Monday),Getsu
 276,けっこんします,,get married,verb,2がつ15にちに けっこんしました。I got married on February 15th.,Kekkon shimasu
 277,げつようび,月よう日,Monday,time,月よう日は いつも いそがしいです。I'm always busy on Mondays.,Getsu youbi
-278,げんかん,,"front door, front entrance",obj,げんかんで くつを ぬぎます。Take off your shoes at the entrance.,Genkan
-279,げんき,,fine [na-adj.],adj,おげんきですか。How are you?,Genki
+278,げんかん,,"front door, front entrance",places,げんかんで くつを ぬぎます。Take off your shoes at the entrance.,Genkan
+279,げんき,,fine [na-adj.],adjadv,おげんきですか。How are you?,Genki
 280,ご,五,five,unit,ふじさんに五かい のぼりました。I climbed Mt. Fuji five times.,Go
-281,こうえん,,park,obj,うちの ちかくに こうえんが あります。There is a park near my house.,Kouen
-282,こうばん,,police box,obj,えきの まえに こうばんが あります。There is a police box in front of the station.,Kou ban
-283,こえ,,voice,obj,いい こえですね。You have a good voice.,Koe
-284,コート,,coat,obj,"さむいから、コートをきます。It's cold, so I'll wear a coat.",Kooto
-285,コーヒー,,coffee,obj,コーヒーを 2はい のみました。I drank two cups of coffee.,Koohii
+281,こうえん,,park,places,うちの ちかくに こうえんが あります。There is a park near my house.,Kouen
+282,こうばん,,police box,man made,えきの まえに こうばんが あります。There is a police box in front of the station.,Kou ban
+283,こえ,,voice,body,いい こえですね。You have a good voice.,Koe
+284,コート,,coat,wearables,"さむいから、コートをきます。It's cold, so I'll wear a coat.",Kooto
+285,コーヒー,,coffee,food,コーヒーを 2はい のみました。I drank two cups of coffee.,Koohii
 286,ここ,,here,direction,ここは あついです。It's hot here.,Koko
 287,ごご,午後,"afternoon, p.m.",time,あしたの 午後は うちに います。I'll be at home tomorrow afternoon.,Gogo
 288,ここのか,九日,"ninth day of the month, nine days",unit,きょうは 九日です。Today is the 9th.,Koko no ka
 289,ここのつ,九つ,nine,unit,ふくろの なかに りんごが 九つ あります。There are nine apples in the bag.,Koko no tsu
 290,ごしゅじん,,(someone's) husband,people,ごしゅじんは いま どこに いますか。Where is your husband now?,Goshujin
 291,ごぜん,午前,a.m.,time,いま 午前 11じです。It's 11am now.,Gozen
-292,こたえ,,answer,obj,ここに こたえを かいてください。Please write your answer here.,Kotae
+292,こたえ,,answer,intangible,ここに こたえを かいてください。Please write your answer here.,Kotae
 293,こたえかた,,how to answer,verb,こたえかたが わかりません。I don't know how to answer.,Kotaekata
 294,こたえます,,answer,verb,もんだいに こたえてください。Please answer the question.,Kotaemasu
 295,こちら,,"this side, this place, this one",direction,こちらは どなたですか。Who is this?,Kochira
-296,コップ,,"glass, drinking cup",obj,テーブルの うえに コップが たくさん あります。There are many cups on the table.,Koppu
+296,コップ,,"glass, drinking cup",home,テーブルの うえに コップが たくさん あります。There are many cups on the table.,Koppu
 297,ことし,今年,this year,time,今年は くにに かえりません。I will not return to the country this year.,Kotoshi
-298,ことば,,"word, language, phrase",obj,たくさん ことばを おぼえました。I learned a lot of words.,Kotoba
+298,ことば,,"word, language, phrase",intangible,たくさん ことばを おぼえました。I learned a lot of words.,Kotoba
 299,こども,子ども,child,people,わたしは 子どもが 3にん います。I have 3 children.,Kodomo
 300,この～,,this ...,direction,このカメラは とても かるいです。This camera is very light.,Kono~
-301,ごはん,,"rice, meal",obj,あさ 8じに ごはんを たべました。I ate at 8 am.,Gohan
-302,コピー,,copy,obj,コピーをもらってもいいですか。May I get a copy?,Kopii
+301,ごはん,,"rice, meal",food,あさ 8じに ごはんを たべました。I ate at 8 am.,Gohan
+302,コピー,,copy,stationery,コピーをもらってもいいですか。May I get a copy?,Kopii
 303,コピーします,,make a copy,verb,5ページから10ページまで コピーしてください。Please copy pages 5 to 10.,Kopii shimasu
-304,こまります,,be in trouble,adj,スマホを わすれましたから、こまりました。I was in trouble because I forgot my smartphone.,Komarimasu
+304,こまります,,be in trouble,adjadv,スマホを わすれましたから、こまりました。I was in trouble because I forgot my smartphone.,Komarimasu
 305,これ,,this (one),direction,これを ２つと、それを ３つ ください。Please give me two of these and three of them.,Kore
 306,こんげつ,今月,this month,unit,今月は とても いそがしいです。This month is very busy.,Kon getsu
 307,こんしゅう,今週,this week,unit,今週は あまり いそがしくないです。I'm not very busy this week.,Kon Shuu
-308,こんな,,"this sort of, like this [na-adj.]",adj,こんな りょうりが すきです。I like this kind of food.,Konna
+308,こんな,,"this sort of, like this [na-adj.]",adjadv,こんな りょうりが すきです。I like this kind of food.,Konna
 309,こんばん,,tonight,time,こんばん 9じに うちに かえります。 I'll be back home tonight at 9 o'clock.,Konban
 310,さいご,,"end, last time",time,レッスンの さいごに しゅくだいを あげます。I will give you homework at the end of the lesson.,Saigo
-311,さかな,魚,fish,obj,にくより 魚のりょうりが すきです。I like fish dishes better than meat.,Sakana
+311,さかな,魚,fish,food,にくより 魚のりょうりが すきです。I like fish dishes better than meat.,Sakana
 312,さき,先,"former, earlier",time,お先に どうぞ。After you.,Saki
 313,さきます,,bloom,verb,はるには いろいろなはながさきます。Various flowers bloom in spring.,Sakimasu
-314,さくぶん,,composition,obj,さくぶんは いい れんしゅうです。Writing is a good practice.,Saku bun
-315,さします,,put up (umbrella),obj,"あめでしたが、かさをさしませんでした。It was raining, but I didn't hold my umbrella.",Sashimasu
-316,サッカー,,"soccer, football",obj,あしたは サッカーの しあいが あります。Tomorrow there is a soccer game.,Sakkaa
-317,ざっし,,magazine,obj,このざっしの しゃしんは きれいです。The photos in this magazine are beautiful.,Zasshi
-318,さとう,,sugar,obj,コーヒーに さとうを いれますか。Would you like to add sugar to your coffee?,Satou
-319,さむい,,cold (weather) [i-adj.],adj,きょうは きのうより さむいです。It's colder today than yesterday.,Samui
+314,さくぶん,,composition,activity,さくぶんは いい れんしゅうです。Writing is a good practice.,Saku bun
+315,さします,,put up (umbrella),verb,"あめでしたが、かさをさしませんでした。It was raining, but I didn't hold my umbrella.",Sashimasu
+316,サッカー,,"soccer, football",activity,あしたは サッカーの しあいが あります。Tomorrow there is a soccer game.,Sakkaa
+317,ざっし,,magazine,stationery,このざっしの しゃしんは きれいです。The photos in this magazine are beautiful.,Zasshi
+318,さとう,,sugar,food,コーヒーに さとうを いれますか。Would you like to add sugar to your coffee?,Satou
+319,さむい,,cold (weather) [i-adj.],adjadv,きょうは きのうより さむいです。It's colder today than yesterday.,Samui
 320,さらいねん,,the year after next,time,たぶん さらいねん にほに いきます。Maybe I will go to Japan the year after next.,Sarai nen
 321,さん,三,three,unit,でんちを さんこ いれます。Insert three batteries.,San
 322,さんぽ,,walk,verb,ちちと ははは さんぽが すきです。My father and mother like walking.,Sanpo
 323,さんぽ(を)します,,take a walk,verb,けさ ははと さんぽをしました。I took a walk with my mother this morning.,Sanpo (wo) shimasu
 324,し,四,four = よん。,unit,"いち、に、さん、四、ご…  one, two, three, four, five ...",Shi
-325,しお,,salt,obj,しおを すこし いれてください。Please add a little salt.,Shio
+325,しお,,salt,food,しおを すこし いれてください。Please add a little salt.,Shio
 326,しかし,,"but, however (formal, written language)",atomic,べんきょうしました。しかし、わすれました。I studied. But I forgot.,Shikashi
 327,じかん,時間,time,time,あしたは 時間が あります。I have time tomorrow.,Jikan
-328,しごと,,work,obj,どんな しごとを していますか。What kind of work do you do?,Shigoto
-329,じしょ,,dictionary,obj,じしょで しらべました。I looked it up in the dictionary.,Jisho
-330,しずか,,quiet [na-adj.],adj,このカフェは しずかです。This cafe is quiet.,Shizuka
+328,しごと,,work,activity,どんな しごとを していますか。What kind of work do you do?,Shigoto
+329,じしょ,,dictionary,stationery,じしょで しらべました。I looked it up in the dictionary.,Jisho
+330,しずか,,quiet [na-adj.],adjadv,このカフェは しずかです。This cafe is quiet.,Shizuka
 331,した,下,"under, below",direction,テーブルの 下に コンセントが あります。There is an outlet under the table.,Shita
-332,しつもん,,question,obj,しつもんが あります。I have a question.,Shitsumon
-333,じてんしゃ,,bicycle,obj,じてんしゃで がっこうに いきます。I go to school by bicycle.,Jitensha
-334,じどうしゃ,,car,obj,じどうしゃが 5だい あります。There are 5 cars.,Jidousha
-335,しにます,,die,adj,ペットが しにました。The pet has died.,Shinimasu
-336,じびき,,dictionary = じしょ,obj,"じしょと じびきは おなじです。""Jisho"" and ""Jibiki"" are the same.",Ji bi ki
-337,じぶん,,oneself,adj,じぶんで つくりました。I made it myself.,Jibun
+332,しつもん,,question,intangible,しつもんが あります。I have a question.,Shitsumon
+333,じてんしゃ,,bicycle,transport,じてんしゃで がっこうに いきます。I go to school by bicycle.,Jitensha
+334,じどうしゃ,,car,transport,じどうしゃが 5だい あります。There are 5 cars.,Jidousha
+335,しにます,,die,adjadv,ペットが しにました。The pet has died.,Shinimasu
+336,じびき,,dictionary = じしょ,stationery,"じしょと じびきは おなじです。""Jisho"" and ""Jibiki"" are the same.",Ji bi ki
+337,じぶん,,oneself,adjadv,じぶんで つくりました。I made it myself.,Jibun
 338,します,,do,verb,あしたは なにを しますか。What are you going to do tomorrow?,Shimasu
 339,しまります,,close (intransitive verb),verb,ドアが しまります。The door closes.,Shimarimasu
 340,しめます,,close (transitive verb),verb,わたしは ドアを しめます。I close the door.,Shimemasu
-341,しゃしん,,"photograph, photo, picture",obj,いっしょに しゃしんを とりましょう。Let's take a picture together.,Shashin
-342,シャツ,,shirt,obj,しろい シャツを かいました。I bought a white shirt.,Shatsu
-343,シャワー,,shower,obj,まいあさ シャワーを あびます。I take a shower every morning.,Shawaa
+341,しゃしん,,"photograph, photo, picture",man made,いっしょに しゃしんを とりましょう。Let's take a picture together.,Shashin
+342,シャツ,,shirt,wearables,しろい シャツを かいました。I bought a white shirt.,Shatsu
+343,シャワー,,shower,activity,まいあさ シャワーを あびます。I take a shower every morning.,Shawaa
 344,しゅう,週,week,unit,この週とこの週はとうきょうに います。This week and this week I'm in Tokyo.,Shuu
 345,じゅう,十,ten,unit,おとこの ひとが 十にん います。There are ten men.,Juu
-346,ジュース,,juice,obj,オレンジジュースをください。Please give me orange juice.,Juusu
-347,じゅぎょう,,"class, lesson",obj,きょうは にほんごの じゅぎょうが あります。I have a Japanese class today.,Jugyou
-348,しゅくだい,,homework,obj,しゅくだいが たくさん あります。I have a lot of homework.,Shuku da i
-349,じょうず,上手,"good, skillful [na-adj.]",adj,かのじょは にほんごが じょうずです。She is good at Japanese.,Jouzu
-350,じょうずに,上手に,well [adv.],adv,とても 上手に できましたね。You did it very well.,Jouzu ni
-351,じょうぶ,,"healthy, strong, firm, durable [na-adj.]",adj,このスーツケースはじょうぶです。 This suitcase is durable.,Joubu
-352,しょうゆ,,soy sauce,obj,しょうゆを すこし いれます。Add a little soy sauce.,Shouyu
-353,しょくどう,,dining room,obj,10かいに しょくどうが あります。There is a dining room on the 10th floor.,Shoku dou
+346,ジュース,,juice,food,オレンジジュースをください。Please give me orange juice.,Juusu
+347,じゅぎょう,,"class, lesson",activity,きょうは にほんごの じゅぎょうが あります。I have a Japanese class today.,Jugyou
+348,しゅくだい,,homework,activity,しゅくだいが たくさん あります。I have a lot of homework.,Shuku da i
+349,じょうず,上手,"good, skillful [na-adj.]",adjadv,かのじょは にほんごが じょうずです。She is good at Japanese.,Jouzu
+350,じょうずに,上手に,well [adv.],adjadv,とても 上手に できましたね。You did it very well.,Jouzu ni
+351,じょうぶ,,"healthy, strong, firm, durable [na-adj.]",adjadv,このスーツケースはじょうぶです。 This suitcase is durable.,Joubu
+352,しょうゆ,,soy sauce,food,しょうゆを すこし いれます。Add a little soy sauce.,Shouyu
+353,しょくどう,,dining room,places,10かいに しょくどうが あります。There is a dining room on the 10th floor.,Shoku dou
 354,しります,知ります,know,verb,"「はい、知っています」「いいえ、知りません」""Yes, I know"" ""No, I don't know""",Shirimasu
-355,しろい,白い,white [i-adj.],adj,白い はなを かいました。I bought a white flower.,Shiroi
-356,しんぶん,新聞,newspaper,obj,うちで 新聞を よみます。I read the newspaper at home.,Shinbun
+355,しろい,白い,white [i-adj.],adjadv,白い はなを かいました。I bought a white flower.,Shiroi
+356,しんぶん,新聞,newspaper,stationery,うちで 新聞を よみます。I read the newspaper at home.,Shinbun
 357,すい,水,Wednesday = すいようび。,time,げつと水は やすみです。 Monday and Wednesday are closed.,Sui
 358,すいます,,"breath in, smoke",verb,たばこを すいますか。Do you smoke?,Suimasu
 359,すいようび,水よう日,Wednesday,time,水よう日は うちで しごとを します。I work at home on Wednesday.,Sui youbi
-360,スカート,,skirt,obj,ときどき スカートを はきます。I wear a skirt sometimes.,Sukaato
-361,すき,,like [na-adj.],adj,わたしは べんきょうが すきです。I like studying.,Suki
+360,スカート,,skirt,wearables,ときどき スカートを はきます。I wear a skirt sometimes.,Sukaato
+361,すき,,like [na-adj.],adjadv,わたしは べんきょうが すきです。I like studying.,Suki
 362,すくない,少ない,few,unit,きょうは しゅくだいが すくないです。I have less homework today.,Sukunai
 363,すぐに,,"soon, right away",time,すぐに おわります。It will end soon.,Sugu ni
-364,すこし,少し,a little,adj,少し じかんを ください。Please give me some time.,Sukoshi
-365,すし,,sushi,obj,きのう すしを たべました。I ate sushi yesterday.,Sushi
-366,すしや,,sushi restaurant,obj,きのうは すしやに いきました。Yesterday I went to a sushi restaurant.,Sushi ya
-367,すずしい,,cool (weather) [i-adj.],adj,きょうは きのうより すずしいです。Today is cooler than yesterday.,Suzushii
-368,ストーブ,,"stove, heater",obj,これは ふるい ストーブです。This is an old stove.,Sutoobu
-369,スプーン,,spoon,obj,スプーンで カレーを たべます。Eat curry with a spoon.,Supuun
-370,スポーツ,,sports,obj,なにか スポーツを していますか。Do you play any sports?,Supootsu
-371,ズボン,,"trousers, pants",obj,ズボンを はきます。I wear pants.,Zubon
+364,すこし,少し,a little,adjadv,少し じかんを ください。Please give me some time.,Sukoshi
+365,すし,,sushi,food,きのう すしを たべました。I ate sushi yesterday.,Sushi
+366,すしや,,sushi restaurant,places,きのうは すしやに いきました。Yesterday I went to a sushi restaurant.,Sushi ya
+367,すずしい,,cool (weather) [i-adj.],adjadv,きょうは きのうより すずしいです。Today is cooler than yesterday.,Suzushii
+368,ストーブ,,"stove, heater",home,これは ふるい ストーブです。This is an old stove.,Sutoobu
+369,スプーン,,spoon,home,スプーンで カレーを たべます。Eat curry with a spoon.,Supuun
+370,スポーツ,,sports,activity,なにか スポーツを していますか。Do you play any sports?,Supootsu
+371,ズボン,,"trousers, pants",wearables,ズボンを はきます。I wear pants.,Zubon
 372,すみます,住みます,"live, inhabit",verb,めぐろに 住んでいます。I live in Meguro.,Sumimasu
-373,スリッパ,,slippers,obj,ここで スリッパを はきます。I will put on my slippers here.,Surippa
+373,スリッパ,,slippers,wearables,ここで スリッパを はきます。I will put on my slippers here.,Surippa
 374,すわります,,sit down,verb,どうぞ ここに すわって ください。Please have a seat here.,Suwarimasu
-375,せ,,height,adj,あのひとは とても せが たかいです。That person is very tall.,Se
+375,せ,,height,adjadv,あのひとは とても せが たかいです。That person is very tall.,Se
 376,せいと,,student,people,わたしは MLCの せいとです。I am a MLC student.,Sei to
-377,セーター,,sweater,obj,このセーターは とても あたたかいです。This sweater is very warm.,Seetaa
-378,せっけん,,soap,obj,せっけんで よく てを あらいましょう。Wash your hands thoroughly with soap.,Sekken
-379,せびろ,,"jacket, suit",obj,あのひとは いつも せびろを きています。That person is always in a suit.,Sebiro
-380,せまい,,"narrow, not spacious [i-adj.]",adj,わたしの へやは せまいです。My room is small.,Semai
+377,セーター,,sweater,wearables,このセーターは とても あたたかいです。This sweater is very warm.,Seetaa
+378,せっけん,,soap,home,せっけんで よく てを あらいましょう。Wash your hands thoroughly with soap.,Sekken
+379,せびろ,,"jacket, suit",wearables,あのひとは いつも せびろを きています。That person is always in a suit.,Sebiro
+380,せまい,,"narrow, not spacious [i-adj.]",adjadv,わたしの へやは せまいです。My room is small.,Semai
 381,ゼロ,,zero,unit,これは カロリーゼロです。This is zero calories.,Zero
 382,せん,千,thousand,unit,これは 千えんです。This is a thousand yen.,Sen
 383,せんげつ,先月,last month,time,先月 ハワイに いきました。I went to Hawaii last month.,Sengetsu
 384,せんしゅう,先週,last week,time,先週の きんようびに びょういんに いきました。I went to the hospital last Friday.,Senshuu
 385,せんせい,先生,teacher,unit,こちらは わたしの 先生です。This is my teacher.,Sensei
-386,せんたく,,"washing, laundry",obj,まいにち せんたくを します。I will do the laundry every day.,Sentaku
-387,ぜんぶ,,all,adj,しゅくだいは ぜんぶ おわりました。I've done all my homework.,Zenbu
-388,そうじ,,cleaning,obj,わたしは そうじが すきです。I like cleaning.,Souji
+386,せんたく,,"washing, laundry",activity,まいにち せんたくを します。I will do the laundry every day.,Sentaku
+387,ぜんぶ,,all,adjadv,しゅくだいは ぜんぶ おわりました。I've done all my homework.,Zenbu
+388,そうじ,,cleaning,activity,わたしは そうじが すきです。I like cleaning.,Souji
 389,そうじします,,clean,verb,これから このへやを そうじします。I'm going to clean this room.,Souji shimasu
 390,そこ,,there,direction,かぎは そこに あります。 The key is there.,Soko
 391,そして,,"and, then",direction,ともだちに あいました。そして、すしやにいきました。I met my friend. Then I went to a sushi restaurant.,Soshite
@@ -395,105 +395,105 @@ order,hiragana,kanji,meaning,category,example,romaji
 393,そと,外,outside,direction,外は すごい あめです。It's raining a lot outside.,Soto
 394,その～,,that ...,atomic,そのひとは とても しんせつでした。The person was very kind.,Sono~
 395,そば,,nearby,direction,オフィスの そばの みせで かいました。I bought it at a store near my office.,Soba
-396,そら,空,sky,obj,きょうは 空が とても きれいですね。The sky is very beautiful today.,Sora
+396,そら,空,sky,nature,きょうは 空が とても きれいですね。The sky is very beautiful today.,Sora
 397,それ,,that (one),atomic,それは なんですか。 What is it?,Sore
 398,それから,,"and then, after that",atomic,"これをください。それから、これもください。 This one, please. Also, this one, please.",Sore kara
 399,それでは,,"then, well",atomic,それでは つぎの ページに いきましょう。Now let's go to the next page.,Sore de wa
-400,だいがく,大学,university,obj,大学で にほんごを べんきょうしました。I studied Japanese at university.,Daigaku
-401,たいしかん,,embassy,obj,これから たいしかんに いきます。I will go to the embassy from now on.,Tai shikan
-402,だいじょうぶ,,"okay, no problem [na-adj.]",adj,だいじょうぶですか。Are you okay?,Daijoubu
-403,だいすき,,"be very fond of, like very much [na-adj.]",adj,チーズケーキが だいすきです。I love cheesecake.,Daisuki
-404,たいせつ,,important [na-adj.],adj,これは とても たいせつです。This is very important.,Taisetsu
+400,だいがく,大学,university,places,大学で にほんごを べんきょうしました。I studied Japanese at university.,Daigaku
+401,たいしかん,,embassy,places,これから たいしかんに いきます。I will go to the embassy from now on.,Tai shikan
+402,だいじょうぶ,,"okay, no problem [na-adj.]",adjadv,だいじょうぶですか。Are you okay?,Daijoubu
+403,だいすき,,"be very fond of, like very much [na-adj.]",adjadv,チーズケーキが だいすきです。I love cheesecake.,Daisuki
+404,たいせつ,,important [na-adj.],adjadv,これは とても たいせつです。This is very important.,Taisetsu
 405,だいたい,,almost,atomic,だいたい おなじ いみです。It has almost the same meaning.,Daitai
 406,たいてい,,"mostly, usually",atomic,あさごはんは たいてい パンと コーヒーです。Breakfast is usually bread and coffee.,Taitei
-407,だいどころ,,kitchen,obj,かないと むすめは だいどころに います。My wife and daughter are in the kitchen.,Daidokoro
-408,たいへん,,very [adv.]  (formal),adv,きのうは たいへん いそがしかったです。It was very busy yesterday.,Taihen
-409,たいへん,,"serious, hard, difficult [na-adj.]",adj,かんじの べんきょうは たいへんです。Studying kanji is hard.,Taihen
-410,たかい,高い,expensive [i-adj.],adj,このカメラは 高いです。This camera is expensive.,Takai
-411,たかい,高い,"tall, high [i-adj.]",adj,あのビルは とても 高いです。That building is very tall.,Takai
+407,だいどころ,,kitchen,places,かないと むすめは だいどころに います。My wife and daughter are in the kitchen.,Daidokoro
+408,たいへん,,very [adv.]  (formal),adjadv,きのうは たいへん いそがしかったです。It was very busy yesterday.,Taihen
+409,たいへん,,"serious, hard, difficult [na-adj.]",adjadv,かんじの べんきょうは たいへんです。Studying kanji is hard.,Taihen
+410,たかい,高い,expensive [i-adj.],adjadv,このカメラは 高いです。This camera is expensive.,Takai
+411,たかい,高い,"tall, high [i-adj.]",adjadv,あのビルは とても 高いです。That building is very tall.,Takai
 412,だから,,"so, therefore",atomic,あしたは あめです。だから、うちにいます。It will rain tomorrow. So I will stay home.,Dakara
 413,たくさん,,"many, much",unit,きょうは たくさん しゅくだいが あります。I have a lot of homework today.,Takusan
-414,タクシー,,taxi,obj,タクシーで 行きましょう。Let's go by taxi.,Takushii
-415,だします,出します,take out,obj,バッグの なかから スマホを 出します。Take your smartphone out of the bag.,Dashimasu
-416,ただしい,,correct [i-adj.],adj,ただしいぶんは どれですか。Which is the correct sentence?,Tadashii
+414,タクシー,,taxi,transport,タクシーで 行きましょう。Let's go by taxi.,Takushii
+415,だします,出します,take out,food,バッグの なかから スマホを 出します。Take your smartphone out of the bag.,Dashimasu
+416,ただしい,,correct [i-adj.],adjadv,ただしいぶんは どれですか。Which is the correct sentence?,Tadashii
 417,たちます,立ちます,stand up,verb,ここに 立ってください。Please stand here.,Tachimasu
-418,たてもの,,building,obj,たかい たてものが たくさん あります。There are many tall buildings.,Tatemono
-419,たのしい,,"enjoyable, pleasant [i-adj.]",adj,きのうの パーティーは とても たのしかったです。Yesterday's party was a lot of fun.,Tanoshii
-420,たのみます,,"ask, request",obj,たなかさんに このしごとを たのみます。I will ask Mr. Tanaka for this job.,Tanomimasu
-421,たばこ,,"cigarette, tobacco",obj,わたしは たばこを すいません。I don't smoke.,Tabako
+418,たてもの,,building,man made,たかい たてものが たくさん あります。There are many tall buildings.,Tatemono
+419,たのしい,,"enjoyable, pleasant [i-adj.]",adjadv,きのうの パーティーは とても たのしかったです。Yesterday's party was a lot of fun.,Tanoshii
+420,たのみます,,"ask, request",verb,たなかさんに このしごとを たのみます。I will ask Mr. Tanaka for this job.,Tanomimasu
+421,たばこ,,"cigarette, tobacco",man made,わたしは たばこを すいません。I don't smoke.,Tabako
 422,たぶん,,"probably, perhaps",atomic,たぶん あしたは じかんが あります。Maybe I have time tomorrow.,Tabun
-423,たべもの,食べもの,food,obj,コンビニで 食べものとのみものをかいました。I bought food and drinks at a convenience store.,Tabemono
+423,たべもの,食べもの,food,food,コンビニで 食べものとのみものをかいました。I bought food and drinks at a convenience store.,Tabemono
 424,たべます,食べます,eat,verb,よく おすしを 食べます。I often eat sushi.,Tabemasu
-425,たまご,,egg,obj,たまごを 10こ かいました。I bought 10 eggs.,Tamago
+425,たまご,,egg,food,たまごを 10こ かいました。I bought 10 eggs.,Tamago
 426,だれ,,who,atomic,あのひとは だれですか。Who is that person.,Dare
-427,たんじょうび,,birthday,obj,たんじょうびは いつですか。When is your birthday.,Tanjou bi
+427,たんじょうび,,birthday,intangible,たんじょうびは いつですか。When is your birthday.,Tanjou bi
 428,だんだん,,"gradually, little by little",atomic,だんだん あたたかくなりました。It's getting warmer and warmer.,Dandan
-429,ちいさい,小さい,small,adj,小さい さかなが います。There is a small fish.,Chiisai
-430,ちいさな+[noun],小さな,small 小さな+[noun],adj,小さな さかなが います。There is a small fish.,Chiisana +[ noun ]
-431,ちかい,近い,"near, close [i-adj.]",adj,わたしの うちは えきから 近いです。My house is close to the station.,Chikai
+429,ちいさい,小さい,small,adjadv,小さい さかなが います。There is a small fish.,Chiisai
+430,ちいさな+[noun],小さな,small 小さな+[noun],adjadv,小さな さかなが います。There is a small fish.,Chiisana +[ noun ]
+431,ちかい,近い,"near, close [i-adj.]",adjadv,わたしの うちは えきから 近いです。My house is close to the station.,Chikai
 432,ちがいます,,"be different, differ",verb,N5とN4は レベルが ちがいます。N5 and N4 have different levels.,Chigaimasu
-433,ちかく,近く,neighborhood [noun],obj,近くの レストランで ばんごはんを たべました。I had dinner at a nearby restaurant,Chikaku
-434,ちかてつ,,subway,obj,ちかてつは とても べんりです。The subway is very convenient.,Chika tetsu
-435,ちず,,map,obj,ちずを みて チェックしましょう。Let's check by looking at the map.,Chizu
+433,ちかく,近く,neighborhood [noun],direction,近くの レストランで ばんごはんを たべました。I had dinner at a nearby restaurant,Chikaku
+434,ちかてつ,,subway,places,ちかてつは とても べんりです。The subway is very convenient.,Chika tetsu
+435,ちず,,map,stationery,ちずを みて チェックしましょう。Let's check by looking at the map.,Chizu
 436,ちち,父,(my) father,people,父は エンジニアです。My father is an engineer.,Chichi
 437,ちゃいろ,,brown,color,わたしの さいふは ちゃいろです。My wallet is brown.,Chairo
-438,ちゃわん,,(rice) bowl,obj,きれいな ちゃわんと おはしを かいました。I bought a beautiful bowl and chopsticks.,Chawan
+438,ちゃわん,,(rice) bowl,food,きれいな ちゃわんと おはしを かいました。I bought a beautiful bowl and chopsticks.,Chawan
 439,ちょうど,,just,atomic,いま 3じ ちょうどです。It's just 3 o'clock now.,Choudo
 440,ちょっと,,a little,atomic,すみません。ここでちょっと まってください。Excuse me. Please wait a moment here.,Chotto
 441,ついたち,一日,the first day of the month,time,たんじょうびは ３がつ ついたちです。Birthday is March 1st.,Tsuitachi
 442,つかいます,,use,verb,しごとで まいにち にほんごを つかいます。I use Japanese every day at work.,Tsukaimasu
-443,つかれます,,get tired,adj,きょうは とても つかれました。I'm very tired today.,Tsukaremasu
+443,つかれます,,get tired,adjadv,きょうは とても つかれました。I'm very tired today.,Tsukaremasu
 444,つぎ,,next,direction,つぎの かどを みぎに まがってください。Turn right at the next corner.,Tsugi
 445,つきます,,arrive,verb,3じはんに なりたくうこうに つきます。I will arrive at Narita Airport at 3:30.,Tsukimasu
-446,つくえ,,desk,obj,つくえの うえに ほんが たくさん あります。There are many books on the desk.,Tsukue
+446,つくえ,,desk,home,つくえの うえに ほんが たくさん あります。There are many books on the desk.,Tsukue
 447,つくりかた,,how to make,atomic,このりょうりの つくりかたを しりたいです。I want to know how to make this dish.,Tsukurikata
 448,つくります,,make,verb,あたらしいアプリをつくりました。I made a new app.,Tsukurimasu
 449,つけます,,turn on,verb,このリモコンで エアコンを つけます。Turn on the air conditioner with this remote control.,Tsukemasu
 450,つとめます,,work for,verb,ちいさい ITの かいしゃに つとめています。I work for a small IT company.,Tsutomemasu
-451,つまらない,,"uninteresting, boring [i-adj.]",adj,このえいがは つまらないです。This movie is boring.,Tsumaranai
-452,つめたい,,cold (object) [i-adj.],adj,つめたいのみのもはいかがですか。How about a cold drink?,Tsumetai
-453,つよい,,strong [i-adj.],adj,きょうは とても かぜが つよいです。It's very windy today.,Tsuyoi
+451,つまらない,,"uninteresting, boring [i-adj.]",adjadv,このえいがは つまらないです。This movie is boring.,Tsumaranai
+452,つめたい,,cold (object) [i-adj.],adjadv,つめたいのみのもはいかがですか。How about a cold drink?,Tsumetai
+453,つよい,,strong [i-adj.],adjadv,きょうは とても かぜが つよいです。It's very windy today.,Tsuyoi
 454,て,手,hand,body,手を みせてください。Please show me your hand.,Te
-455,ティッシュペーパー,,tissue,obj,ティッシュペーパーをいちまい ください。Please give me a piece of tissue paper.,Tisshu peepaa
-456,テープ,,tape,obj,ここに テープを はってください。Please stick the tape here.,Teepu
-457,テープレコーダー,,tape recorder,obj,テープレコーダーはいまは ありません。There is no tape recorder now.,Teepu rekoodaa
-458,テーブル,,table,obj,このテーブルを つかってもいいですか。Can I use this table?,Teeburu
+455,ティッシュペーパー,,tissue,man made,ティッシュペーパーをいちまい ください。Please give me a piece of tissue paper.,Tisshu peepaa
+456,テープ,,tape,stationery,ここに テープを はってください。Please stick the tape here.,Teepu
+457,テープレコーダー,,tape recorder,man made,テープレコーダーはいまは ありません。There is no tape recorder now.,Teepu rekoodaa
+458,テーブル,,table,home,このテーブルを つかってもいいですか。Can I use this table?,Teeburu
 459,でかけます,出かけます,go out,verb,きのうは どこにも でかけませんでした。I didn't go anywhere yesterday.,Dekakemasu
-460,てがみ,手紙,letter,obj,"よくメールは しますが、手紙はかきません。I often email, but I don't write letters.",Tegami
+460,てがみ,手紙,letter,stationery,"よくメールは しますが、手紙はかきません。I often email, but I don't write letters.",Tegami
 461,できます,,can,atomic,わたしは ちゅうごくごと かんこくごも できます。I can also speak Chinese and Korean.,Dekimasu
-462,でぐち,出口,exit,obj,出口は あちらのドアです。The exit is that door.,De guchi
-463,テスト,,test,obj,あしたは かんじのテストがあります。Tomorrow I have a kanji test.,Tesuto
+462,でぐち,出口,exit,places,出口は あちらのドアです。The exit is that door.,De guchi
+463,テスト,,test,intangible,あしたは かんじのテストがあります。Tomorrow I have a kanji test.,Tesuto
 464,では,,"then, well then = じゃ。",atomic,では、きょうの レッスンを おわりましょう。So let's finish today's lesson.,De wa
-465,デパート,,department store,obj,デパートに かいものに いきました。I went shopping at a department store.,Depaato
+465,デパート,,department store,places,デパートに かいものに いきました。I went shopping at a department store.,Depaato
 466,でます,出ます,leave,verb,あしたは あさ 7じに うちを 出ます。I will leave home at 7 am tomorrow.,Demasu
 467,でも,,but,atomic,にちようびです。でも、うちでしごとを します。It's Sunday. But I do work at home.,De mo
-468,テレビ,,TV,obj,テレビで そのニュースを みました。I saw the news on TV.,Terebi
-469,てんき,天気,weather,obj,きょうは とても いい天気ですね。It's a very nice weather today.,Tenki
-470,でんき,電気,electricity,obj,電気を つけても いいですか。Can I turn on the light?,Denki
-471,でんしゃ,電車,train,obj,電車は すこし こんでいました。The train was a little crowded.,Densha
-472,でんわ,電話,telephone,obj,きのう ははから 電話が ありました。I got a call from my mother yesterday.,Denwa
+468,テレビ,,TV,home,テレビで そのニュースを みました。I saw the news on TV.,Terebi
+469,てんき,天気,weather,nature,きょうは とても いい天気ですね。It's a very nice weather today.,Tenki
+470,でんき,電気,electricity,nature,電気を つけても いいですか。Can I turn on the light?,Denki
+471,でんしゃ,電車,train,transport,電車は すこし こんでいました。The train was a little crowded.,Densha
+472,でんわ,電話,telephone,home,きのう ははから 電話が ありました。I got a call from my mother yesterday.,Denwa
 473,でんわします,電話します,"call, ring",verb,たまに かぞくに 電話します。I call my family once in a while.,Denwa shimasu
-474,でんわばんごう,電話ばんごう,telephone number,obj,ここに 電話ばんごうをかいてください。Please write your phone number here.,Denwa bangou
-475,と,,door,obj,とが あいています。The door is open.,To
+474,でんわばんごう,電話ばんごう,telephone number,intangible,ここに 電話ばんごうをかいてください。Please write your phone number here.,Denwa bangou
+475,と,,door,home,とが あいています。The door is open.,To
 476,ど,,Saturday = どようび。,time,"5がつ16にち（ど）に にほんに いきます。I will go to Japan on Saturday, May 16th.",Do
-477,ドア,,door,obj,みぎがわのドアがあきます。The door on the right opens.,Doa
-478,トイレ,,"toilet, lavatory",obj,トイレを かりても いいですか。Can I use the toilet?,Toire
-479,トイレットペーパー,,toilet paper,obj,トイレットペーパーがありません！There is no toilet paper!,Toiretto peepaa
+477,ドア,,door,home,みぎがわのドアがあきます。The door on the right opens.,Doa
+478,トイレ,,"toilet, lavatory",places,トイレを かりても いいですか。Can I use the toilet?,Toire
+479,トイレットペーパー,,toilet paper,home,トイレットペーパーがありません！There is no toilet paper!,Toiretto peepaa
 480,どう,,how,atomic,きのうの テストは どうでしたか。How was your test yesterday?,Dou
-481,とうきょう,,Tokyo,obj,"とうきょうは おもしろい ところですね。Tokyo is an interesting place, isn't it?",Toukyou
+481,とうきょう,,Tokyo,places,"とうきょうは おもしろい ところですね。Tokyo is an interesting place, isn't it?",Toukyou
 482,どうして,,why,atomic,どうして きのう やすみましたか。Why did you take a day off yesterday?,Dou shite
-483,とうふ,,tofu,obj,とうふ を たべたことが ありますか。Have you ever eaten tofu?,Toufu
-484,どうぶつ,,animal,obj,どうぶつえんに いろいろな どうぶつが います。There are various animals in the zoo.,Doubutsu
+483,とうふ,,tofu,food,とうふ を たべたことが ありますか。Have you ever eaten tofu?,Toufu
+484,どうぶつ,,animal,nature,どうぶつえんに いろいろな どうぶつが います。There are various animals in the zoo.,Doubutsu
 485,とお,十,ten,unit,"ひとつ、ふたつ、みっつ、よっつ、いつつ、むっつ、ななつ、やっつ、ここのつ、十。One, two, three, four, five, six, seven, eight, nine, ten.",Too
-486,とおい,,far [i-adj.],adj,えきは ここから すこし とおいです。The station is a little far from here.,Tooi
+486,とおい,,far [i-adj.],adjadv,えきは ここから すこし とおいです。The station is a little far from here.,Tooi
 487,とおく,,"distantly, far [noun]",direction,りょうしんは とおくに すんでいます。My parents live far away.,Tooku
 488,とおか,十日,"the tenth day of the month, ten days",unit,きょうは 十日です。Today is the 10th.,Too ka
 489,ときどき,,sometimes,atomic,ときどき じぶんで りょうりを つくります。Sometimes I cook myself.,Tokidoki
-490,とけい,,"clock, watch",obj,ともだちに かわいい とけいを プレゼントしました。I gave my friend a cute clock as a gift.,Tokei
+490,とけい,,"clock, watch",home,ともだちに かわいい とけいを プレゼントしました。I gave my friend a cute clock as a gift.,Tokei
 491,どこ,,where,direction,おてあらいは どこですか。Where is the restroom?,Doko
 492,どこか,,somewhere,direction,どこかで ランチを たべませんか。Would you like to have lunch somewhere?,Doko ka
-493,ところ,,place,obj,どんな ところに すみたいですか。What kind of place do you want to live in?,Tokoro
-494,としょかん,,library,obj,わたしは ほとんど としょかんに いきません。I rarely go to the library.,To shokan
+493,ところ,,place,places,どんな ところに すみたいですか。What kind of place do you want to live in?,Tokoro
+494,としょかん,,library,places,わたしは ほとんど としょかんに いきません。I rarely go to the library.,To shokan
 495,どちら,,「どっち which」「どこ where」「どれ which one」のpolite,atomic,"コーヒーとこうちゃ、どちがいいですか。Which would you like, coffee or tea? どちらからですか。Where are you from? どちらが いいですか。Which one would you like to choose?",Dochira
 496,とても,,very,atomic,きょうは とても たのしかったです。I had a lot of fun today.,Totemo
 497,どなた,,だれ。who のpolite,atomic,この しゃしんの ひとは どなた ですか。Who is the person in this photo?,Donata
@@ -501,17 +501,17 @@ order,hiragana,kanji,meaning,category,example,romaji
 499,どの～,,which ...,atomic,どのアプリを いちばん よく つかいますか。Which app do you use the most?,Dono~
 500,とびます,,fly,verb,とりが たくさん とんでいます。A lot of birds are flying.,Tobimasu
 501,とまります,,stop,verb,このでんしゃは しぶやえきに とまりますか。Does this train stop at Shibuya Station?,Tomarimasu
-502,ともだち,友だち,friend,obj,きのうは 友だちと オンラインで はなしました。I talked online with my friends yesterday.,Tomodachi
+502,ともだち,友だち,friend,people,きのうは 友だちと オンラインで はなしました。I talked online with my friends yesterday.,Tomodachi
 503,どようび,土よう日,Saturday,time,こんしゅうの 土よう日はやすみです。This Saturday is closed.,Do youbi
-504,とり,,bird,obj,きの うえに ちいさいとりが たくさん います。There are many small birds on the tree.,Tori
-505,とりにく,,chicken,obj,とりにくを よく たべます。I often eat chicken.,Toriniku
+504,とり,,bird,nature,きの うえに ちいさいとりが たくさん います。There are many small birds on the tree.,Tori
+505,とりにく,,chicken,nature,とりにくを よく たべます。I often eat chicken.,Toriniku
 506,とります,,take,verb,すみません。こしょうをとってください。Excuse me. Could you pass the pepper?,Torimasu
 507,とります,,take (photographs),verb,きょうとで たくさん きれいな しゃしんを とりました。I took a lot of beautiful pictures in Kyoto.,Torimasu
 508,どれ,,which one,atomic,おすすめは どれですか。Which is your recommendation?,Dore
 509,どんな,,what kind of ...,atomic,どんな ものを たべたいですか。What kind of food do you want to eat?,Donna
-510,ナイフ,,knife,obj,フォークと ナイフで ステーキを たべます。I eat steak with a fork and knife.,Naifu
+510,ナイフ,,knife,home,フォークと ナイフで ステーキを たべます。I eat steak with a fork and knife.,Naifu
 511,なか,中,inside,direction,ポケットの 中に ティッシュが あります。There is tissue in my pocket.,Naka
-512,ながい,長い,long [i-adj.],adj,このえいがは とても 長いです。This movie is very long.,Nagai
+512,ながい,長い,long [i-adj.],adjadv,このえいがは とても 長いです。This movie is very long.,Nagai
 513,なきます,,"sing, mew, moo, etc.",verb,たくさんの とりが ないています。Many birds are singing.,Nakimasu
 514,なつ,,summer,nature,いちねんの なかで なつが いちばん すきです。I like summer the best of the year.,Natsu
 515,など,,"and so on, etc.",atomic,"バッグの なかに スマホや サイフなどが あります。There are smartphones, wallets and other things in the bag.",Nado
@@ -528,124 +528,124 @@ order,hiragana,kanji,meaning,category,example,romaji
 526,なんじ,何時,what time,time,あしたは 何時にどこであいましょうか。What time and where will we meet tomorrow?,Nan ji
 527,なんにち,何日,which day of the month,time,きょうは 何日ですか。What day is it today?,Nan nichi
 528,に,二,two,unit,"三、二、一 スタート！  Three, two, one start!",Ni
-529,にぎやか,,lively [na-adj.],adj,"ここは にぎやなかな レストランですね。This is a lively restaurant, isn't it?",Nigiyaka
-530,にく,,meat,obj,"さかなと にく、どちらがいいですか。Which do you prefer, fish or meat?",Niku
+529,にぎやか,,lively [na-adj.],adjadv,"ここは にぎやなかな レストランですね。This is a lively restaurant, isn't it?",Nigiyaka
+530,にく,,meat,food,"さかなと にく、どちらがいいですか。Which do you prefer, fish or meat?",Niku
 531,にし,西,west,direction,西は こっちです。West is this direction.,Ni shi
 532,にち,日,Sunday = にちようび。,time,たんじょうびは  5がつ 17にちです。My birthday is May 17th.,Ni chi
 533,にちようび,日よう日,Sunday,time,こんどの 日よう日の おひるごろに あいましょうか。Shall we meet next Sunday around noon?,Nichi youbi
 534,にねん,二年,two years,unit,わたしは にほんに きて もう 二年です。I have been in Japan for two years now.,Ni nen
-535,にほん,日本,Japan,obj,１ねんまえから 日本で しごとを しています。I have been working in Japan for a year.,Nihon
-536,にほんご,日本語,Japanese language,obj,はんとしまえから日本語を べんきょうしています。I have been studying Japanese for half a year.,Nihongo
-537,にもつ,,baggage,obj,ここに にもつを おいても いいですか。Can I put my luggage here?,Nimotsu
-538,ニュース,,news,obj,よく インターネットで ニュースを みます。I often watch the news on the internet.,Nyuusu
-539,にわ,,garden,obj,にわに いぬが 2ひき います。There are two dogs in the yard.,Niwa
+535,にほん,日本,Japan,places,１ねんまえから 日本で しごとを しています。I have been working in Japan for a year.,Nihon
+536,にほんご,日本語,Japanese language,intangible,はんとしまえから日本語を べんきょうしています。I have been studying Japanese for half a year.,Nihongo
+537,にもつ,,baggage,wearables,ここに にもつを おいても いいですか。Can I put my luggage here?,Nimotsu
+538,ニュース,,news,intangible,よく インターネットで ニュースを みます。I often watch the news on the internet.,Nyuusu
+539,にわ,,garden,places,にわに いぬが 2ひき います。There are two dogs in the yard.,Niwa
 540,ぬぎます,,take off,verb,いつも ここで くつを ぬぎます。I always take off my shoes here.,Nugimasu
-541,ぬります,,paint,obj,テーブルを しろく ぬります。I paint the table white.,Nurimasu
-542,ネクタイ,,necktie,obj,わたしは ネクタイが 30ぽんぐらい あります。I have about 30 ties.,Nekutai
+541,ぬります,,paint,home,テーブルを しろく ぬります。I paint the table white.,Nurimasu
+542,ネクタイ,,necktie,wearables,わたしは ネクタイが 30ぽんぐらい あります。I have about 30 ties.,Nekutai
 543,ねます,,"go to bed, sleep",verb,いつも 12じごろに ねます。I always go to bed around 12 o'clock.,Ne masu
-544,ノート,,notebook,obj,じぶんの ノートに かいてください。Write it in your notebook.,Nooto
+544,ノート,,notebook,stationery,じぶんの ノートに かいてください。Write it in your notebook.,Nooto
 545,のぼります,,"go up, climb",verb,なつに ともだちと ふじさんにのぼります。I will climb Mt. Fuji with my friends this summer.,Noborimasu
 546,のみます,飲みます,drink,verb,まいにち コーヒーを ３ばいぐらい 飲みます。I drink about 3 cups of coffee every day.,Nomi masu
-547,のみもの,飲みもの,drinks,obj,飲みものは なにが いいですか。What do you like for a drink?,Nomi mono
+547,のみもの,飲みもの,drinks,food,飲みものは なにが いいですか。What do you like for a drink?,Nomi mono
 548,のります,,"get on, ride, take",verb,うちの ちかくから えきまで バスに のります。I take a bus from near my house to the station.,Norimasu
-549,は,,teeth,obj,きょうは すこし はが いたいです。I have a slight toothache today.,Wa
-550,パーティー,,party,obj,こんばん ともだちのうちで パーティーが あります。I have a party at my friend's house tonight.,Paatii
-551,はいざら,,ashtray,obj,すみません。はいざらがありますか。Excuse me. Do you have an ashtray?,Hai zara
+549,は,,teeth,body,きょうは すこし はが いたいです。I have a slight toothache today.,Wa
+550,パーティー,,party,activity,こんばん ともだちのうちで パーティーが あります。I have a party at my friend's house tonight.,Paatii
+551,はいざら,,ashtray,man made,すみません。はいざらがありますか。Excuse me. Do you have an ashtray?,Hai zara
 552,はいります,入ります,enter,verb,いつも  このいりぐちから なかに 入ります。I always enter through this entrance.,Hairimasu
-553,はがき,,postcard,obj,ゆびんきょくで はがきを 10まい かいました。I bought 10 postcards at the post office.,Hagaki
+553,はがき,,postcard,stationery,ゆびんきょくで はがきを 10まい かいました。I bought 10 postcards at the post office.,Hagaki
 554,はきます,,put on,verb,いつも ここで くつを はきます。I always put on shoes here.,Hakimasu
-555,はこ,,box,obj,はこの なかに くるまの かぎが あります。There is a car key in the box.,Hako
-556,はし/おはし,,chopsticks,obj,おはしで おすしを たべます。I eat sushi with chopsticks.,Hashi/ohashi
-557,はし,,bridge,obj,あの おおきい はしを あるいて わたります。I walk across a large bridge.,Hashi
+555,はこ,,box,stationery,はこの なかに くるまの かぎが あります。There is a car key in the box.,Hako
+556,はし/おはし,,chopsticks,home,おはしで おすしを たべます。I eat sushi with chopsticks.,Hashi/ohashi
+557,はし,,bridge,places,あの おおきい はしを あるいて わたります。I walk across a large bridge.,Hashi
 558,はじまります,,"begin, start",time,らいしゅうから にほんごのレッスンがはじまります。Japanese lessons will start next week.,Hajimarimasu
 559,はじめに,,at the beginning,time,"はじめに ひらがなと カタカナを べんきょうしました。First, I studied hiragana and katakana.",Hajime ni
 560,はじめて,,for the first time,unit,きょねん はじめて ふじさんをみました。I saw Mt. Fuji for the first time last year.,Hajimete
-561,バス,,bus,obj,うちから がっこうまでバスで 20ぷんです。20 minutes by bus from my house to school.,Basu
-562,バスがいしゃ,バス会社,"bus agency, bus company",obj,いもうとは バス会社に つとめています。My sister works for a bus company.,Basu ga isha
-563,バスてい,,bus stop,obj,このちかくに バスていが ありますか。Is there a bus stop near here?,Basutei
-564,バスりょこう,,"bus tour, bus trip",obj,わたしの ちちと ははは バスりょこうが すきです。My dad and mom love bus trips.,Basu ryokou
-565,バター,,butter,obj,パンに バターを ぬります。I spread butter on bread.,Bataa
+561,バス,,bus,transport,うちから がっこうまでバスで 20ぷんです。20 minutes by bus from my house to school.,Basu
+562,バスがいしゃ,バス会社,"bus agency, bus company",intangible,いもうとは バス会社に つとめています。My sister works for a bus company.,Basu ga isha
+563,バスてい,,bus stop,transport,このちかくに バスていが ありますか。Is there a bus stop near here?,Basutei
+564,バスりょこう,,"bus tour, bus trip",activity,わたしの ちちと ははは バスりょこうが すきです。My dad and mom love bus trips.,Basu ryokou
+565,バター,,butter,food,パンに バターを ぬります。I spread butter on bread.,Bataa
 566,はたち,,twenty years old,unit,おとうとは らいげつ はたちに なります。My brother will be 20 next month.,Hatachi
 567,はたらきます,,work,verb,こんしゅうは しゅうまつも はたらきます。This week I also work on weekends.,Hatarakimasu
 568,はち,八,eight,unit,八人で りょこうに いきました。I went on a trip with 8 people.,Hachi
 569,はつか,二十日,"the twentieth day of the month, twenty days",unit,きょうは 二十日です。Today is the 20th.,Wa tsu ka
 570,はな,,nose,body,わたしは はなが ひくいです。I have a low nose.,Hana
-571,はな,花,flower,obj,きれいな 花を たくさん かいました。I bought a lot of beautiful flowers.,Hana
-572,はなし,話,story,obj,せんせいから おもしろい話を ききました。I heard an interesting story from the teacher.,Hanashi
+571,はな,花,flower,nature,きれいな 花を たくさん かいました。I bought a lot of beautiful flowers.,Hana
+572,はなし,話,story,intangible,せんせいから おもしろい話を ききました。I heard an interesting story from the teacher.,Hanashi
 573,はなします,話します,"speak, talk, tell",verb,よく ともだちと にほんごを 話します。I often speak Japanese with my friends.,Hanashimasu
 574,はは,母,(my) mother,people,ときどき 母に メールします。I email my mother sometimes.,Haha
-575,はやい,,early [i-adj.],adj,あさ 4じはんは はやいです。4:30 in the morning is early.,Hayai
-576,はやい,,"quick, fast [i-adj.]",adj,このコンピュータははやいです。This computer is fast.,Hayai
+575,はやい,,early [i-adj.],adjadv,あさ 4じはんは はやいです。4:30 in the morning is early.,Hayai
+576,はやい,,"quick, fast [i-adj.]",adjadv,このコンピュータははやいです。This computer is fast.,Hayai
 577,はる,,spring,nature,はなが すきですから、はるがすきです。I like spring because I like flowers.,Haru
 578,はります,,"stick, put something on",verb,ふうとうに きってを はります。I put a stamp on the envelope.,Harimasu
 579,はれ,,fair weather,nature,あしたは たぶん はれです。It will probably be sunny tomorrow.,Hare
 580,はれます,,clear up,verb,ごごは たぶん はれます。It will probably be sunny in the afternoon.,Haremasu
 581,ばん,,"evening, night",time,あしたのばん ともだちに あいます。I'll see my friends tomorrow night.,Ban
-582,パン,,bread,obj,あさは ふつう パンを たべます。I usually eat bread in the morning.,Pan
-583,ハンカチ,,handkerchief,obj,ポケットの なかに ハンカチが あります。There is a handkerchief in my pocket.,Hankachi
+582,パン,,bread,food,あさは ふつう パンを たべます。I usually eat bread in the morning.,Pan
+583,ハンカチ,,handkerchief,man made,ポケットの なかに ハンカチが あります。There is a handkerchief in my pocket.,Hankachi
 584,ばんごう,,number,unit,でんわばんごうはなんばんですか。What is your phone number?,Bangou
-585,ばんごはん,,dinner,obj,こんばんは うちで ばんごはんを たべます。I'll have dinner at home tonight.,Ban gohan
+585,ばんごはん,,dinner,food,こんばんは うちで ばんごはんを たべます。I'll have dinner at home tonight.,Ban gohan
 586,はんぶん,半分,half,unit,きのうのよる 半分だけ しゅくだいを しました。I did my homework only half last night.,Hanbun
-587,パンや,,bakery,obj,えきの なかに おいしい パンやが あります。There is a delicious bakery inside the station.,Pan ya
+587,パンや,,bakery,places,えきの なかに おいしい パンやが あります。There is a delicious bakery inside the station.,Pan ya
 588,ひ,日,day,unit,きょうは とても いい日でした。Today was a very good day.,Hi
 589,ひがし,東,east,direction,東は あっちです。East is that direction.,Higashi
 590,ひきます,,pull,verb,おかねを いれて、レバーをひきます。Put some money and pull the lever.,Hikimasu
 591,ひきます,,play (music instrument),verb,ときどき ギターを ひきます。I play the guitar sometimes.,Hikimasu
-592,ひくい,,low [i-adj.],adj,いもうとは せが ひくいです。My sister is short.,Hikui
-593,ひこうき,,airplane,obj,ひこうきの よやくを しました。I made a reservation for an airplane.,Hikouki
+592,ひくい,,low [i-adj.],adjadv,いもうとは せが ひくいです。My sister is short.,Hikui
+593,ひこうき,,airplane,transport,ひこうきの よやくを しました。I made a reservation for an airplane.,Hikouki
 594,ひだり,左,left,direction,つぎの しんごうを 左に まがってください。Turn left at the next traffic light.,Hidari
 595,ひと,人,"human, person",unit,こうえんに 人が たくさん います。There are many people in the park.,Hito
 596,ひとつ,一つ,one,unit,すみません。これを一つ ください。Excuse me. Please give me this one.,Hitotsu
 597,ひとつき,一月,one month = いっかげつ。,unit,にほんに きて 一月です。It's been a month since I came to Japan.,Hitotsuki
 598,ひとり,一人,one person,unit,ことしの なつは 一人で りょこうに いきます。I'm going on a trip alone this summer.,Hitori
-599,ひま,,"free (time), not busy, spare time [na-adj.]",adj,こんしゅうまつは ひまです。I'm free this weekend.,Hima
+599,ひま,,"free (time), not busy, spare time [na-adj.]",adjadv,こんしゅうまつは ひまです。I'm free this weekend.,Hima
 600,ひゃく,百,hundred,unit,これは どれでも ひとつ 百えんです。Each one costs 100 yen.,Hyaku
-601,びょういん,,hospital,obj,つきに １かい びょういんに いきます。I go to the hospital once a month.,Byouin
-602,びょうき,,"illness, disease",obj,ははは いま びょうきです。My mother is sick now.,Byouki
-603,ひらがな,,Hiragana,obj,ひらがなで かきます。I write in hiragana.,Hiragana
+601,びょういん,,hospital,places,つきに １かい びょういんに いきます。I go to the hospital once a month.,Byouin
+602,びょうき,,"illness, disease",intangible,ははは いま びょうきです。My mother is sick now.,Byouki
+603,ひらがな,,Hiragana,intangible,ひらがなで かきます。I write in hiragana.,Hiragana
 604,ひる,昼,"daytime, noon",time,あしたの 昼は うちに います。I'll be at home tomorrow noon.,Hiru
-605,ビル,,building,obj,たかい ビルが たくさん あります。There are many tall buildings.,Biru
-606,ひるごはん,昼ごはん,lunch,obj,ともだちと 昼ごはんを たべました。I ate lunch with my friends.,Hiru gohan
-607,ひろい,広い,"spacious, wide [i-adj.]",adj,このへやは とても 広いです。This room is very large.,Hiroi
-608,フィルム,,film,obj,カメラに フィルムを いれます。I put the film in the camera.,Firumu
-609,ふうとう,,envelope,obj,ふうとうの なかに チケットを いれます。I put the ticket in the envelope.,Fuutou
-610,プール,,swimming pool,obj,"きのう プールで 1,000メートル およぎました。I swam 1,000 meters in the pool yesterday.",Puuru
-611,フォーク,,fork,obj,フォークとナイフでステーキを たべます。I eat steak with a fork and knife.,Fooku
+605,ビル,,building,intangible,たかい ビルが たくさん あります。There are many tall buildings.,Biru
+606,ひるごはん,昼ごはん,lunch,food,ともだちと 昼ごはんを たべました。I ate lunch with my friends.,Hiru gohan
+607,ひろい,広い,"spacious, wide [i-adj.]",adjadv,このへやは とても 広いです。This room is very large.,Hiroi
+608,フィルム,,film,man made,カメラに フィルムを いれます。I put the film in the camera.,Firumu
+609,ふうとう,,envelope,stationery,ふうとうの なかに チケットを いれます。I put the ticket in the envelope.,Fuutou
+610,プール,,swimming pool,places,"きのう プールで 1,000メートル およぎました。I swam 1,000 meters in the pool yesterday.",Puuru
+611,フォーク,,fork,home,フォークとナイフでステーキを たべます。I eat steak with a fork and knife.,Fooku
 612,ふきます,,blow,verb,そとは すごい かぜが ふいています。There is a terrible wind outside.,Fukimasu
-613,ふく,,clothes,obj,あたらしい ふくを たくさん かいました。I bought a lot of new clothes.,Fuku
+613,ふく,,clothes,wearables,あたらしい ふくを たくさん かいました。I bought a lot of new clothes.,Fuku
 614,ふたつ,二つ,two,unit,このパンを 二つ ください。Please give me two of these breads.,Futatsu
-615,ぶたにく,,pork,obj,わたしは ぶたにくを たべません。I don't eat pork.,Butaniku
+615,ぶたにく,,pork,food,わたしは ぶたにくを たべません。I don't eat pork.,Butaniku
 616,ふたり,二人,two people,unit,わたしは こどもが 二人 います。I have two children.,Futari
 617,ふつか,二日,"the second day of the month, two days",time,きょうは 二日です。Today is 2nd.,Futsu ka
-618,ふとい,,"thick, fat [i-adj.]",adj,ふといペンで じゅうしょを かきます。I write my address with a thick pen.,Futoi
+618,ふとい,,"thick, fat [i-adj.]",adjadv,ふといペンで じゅうしょを かきます。I write my address with a thick pen.,Futoi
 619,ふゆ,,winter,nature,まいとし ふゆに スキーに  いきます。I go skiing every winter.,Fuyu
 620,ふります,,"fall, come down",verb,たぶん こんばんは あめが ふります。Maybe it will rain tonight.,Furimasu
-621,ふるい,古い,old [i-adj.],adj,これは 古いカメラです。This is an old camera.,Furui
-622,ふろ,,bath    「おふろ」more polite,obj,まいにち おふろに はいります。I take a bath every day.,Furo
-623,ぶん,文,sentence,obj,ながい 文を かいてください。Please write a long sentence.,Bun
-624,ぶんしょう,,text,obj,つぎの ぶんしょうを よんで、しつもんにこたえてください。Please read the following sentences and answer the questions.,Bunshou
-625,ページ,,page,obj,53ページを よんでください。Please read page 53.,Peeji
-626,へた,,"poor, unskillful [na-adj.]",adj,わたしは うたが へたです。I'm not good at singing.,Heta
-627,ベッド,,bed,obj,ベッドの したに ねこが います。There is a cat under the bed.,Beddo
-628,へや,,room,obj,この へやは ひろいですね。This room is large.,Heya
+621,ふるい,古い,old [i-adj.],adjadv,これは 古いカメラです。This is an old camera.,Furui
+622,ふろ,,bath    「おふろ」more polite,activity,まいにち おふろに はいります。I take a bath every day.,Furo
+623,ぶん,文,sentence,intangible,ながい 文を かいてください。Please write a long sentence.,Bun
+624,ぶんしょう,,text,intangible,つぎの ぶんしょうを よんで、しつもんにこたえてください。Please read the following sentences and answer the questions.,Bunshou
+625,ページ,,page,intangible,53ページを よんでください。Please read page 53.,Peeji
+626,へた,,"poor, unskillful [na-adj.]",adjadv,わたしは うたが へたです。I'm not good at singing.,Heta
+627,ベッド,,bed,home,ベッドの したに ねこが います。There is a cat under the bed.,Beddo
+628,へや,,room,places,この へやは ひろいですね。This room is large.,Heya
 629,へん,,"side, part このへん。 = near here",direction,このへんにATMが ありますか。Is there an ATM near here?,Hen
-630,ペン,,pen,obj,ここに なまえを ペンで かいてください。Please write your name here with a pen.,Pen
+630,ペン,,pen,stationery,ここに なまえを ペンで かいてください。Please write your name here with a pen.,Pen
 631,べんきょうします,,study,verb,まいにち うちで にほんごを べんきょうします。I will study Japanese at home every day.,Benkyou shimasu
-632,べんり,,convenience [na-adj.],adj,このアプリは とても べんりです。This app is very useful.,Benri
+632,べんり,,convenience [na-adj.],adjadv,このアプリは とても べんりです。This app is very useful.,Benri
 633,ほう,,ＡよりＢのほうが～。B is ... than A.,atomic,ふゆより なつのほうが すきです。I like summer better than winter.,Hou
-634,ぼうし,,"hat, cap",obj,さむいひは ぼうしを かぶります。I wear a hat on cold days.,Boushi
-635,ボールペン,,ballpoint pen,obj,ボールペンを もっていますか。Do you have a ballpoint pen?,Booru pen
+634,ぼうし,,"hat, cap",wearables,さむいひは ぼうしを かぶります。I wear a hat on cold days.,Boushi
+635,ボールペン,,ballpoint pen,stationery,ボールペンを もっていますか。Do you have a ballpoint pen?,Booru pen
 636,ほか,,"another, other",atomic,ほかの ひは  どうですか。How about the other day?,Hoka
 637,ぼく,,"I (generally young boys, but some adult use as a style)",people,ぼくは 13さいです。I am 13 years old.,Boku
-638,ポケット,,pocket,obj,ポケットの なかに けいたいでんわがあります。I have a mobile phone in my pocket.,Poketto
-639,ほしい,,want (something) [i-adj.],adj,あたらしいカメラがほしいです。 I want a new camera.,Hoshii
-640,ほそい,,"thin, fine [i-adj.]",adj,ほそいペンで イラストを かきます。Draw an illustration with a thin pen.,Hosoi
-641,ボタン,,button,obj,このシャツは ボタンが ひとつ ありません。This shirt doesn't have one button.,Botan
-642,ホテル,,hotel,obj,ホテルで おいしい ひるごはんを たべました。I had a delicious lunch at the hotel.,Hoteru
+638,ポケット,,pocket,wearables,ポケットの なかに けいたいでんわがあります。I have a mobile phone in my pocket.,Poketto
+639,ほしい,,want (something) [i-adj.],adjadv,あたらしいカメラがほしいです。 I want a new camera.,Hoshii
+640,ほそい,,"thin, fine [i-adj.]",adjadv,ほそいペンで イラストを かきます。Draw an illustration with a thin pen.,Hosoi
+641,ボタン,,button,wearables,このシャツは ボタンが ひとつ ありません。This shirt doesn't have one button.,Botan
+642,ホテル,,hotel,places,ホテルで おいしい ひるごはんを たべました。I had a delicious lunch at the hotel.,Hoteru
 643,ほん,本,book,unit,しゅうに ３さつぐらい 本を よみます。I read about 3 books a week.,Hon
-644,ほんだな,,bookshelf,obj,ほんだなに本が 200さつぐらい あります。There are about 200 books on the bookshelf.,Hon da na
+644,ほんだな,,bookshelf,home,ほんだなに本が 200さつぐらい あります。There are about 200 books on the bookshelf.,Hon da na
 645,ほんとう,,"really, truth",atomic,ほんとうですか。しりませんでした。Is it true? I did not know that.,Hontou
-646,ほんや,,bookshop,obj,５かいに おおきい ほんやが あります。There is a large bookstore on the 5th floor.,Hon ya
+646,ほんや,,bookshop,places,５かいに おおきい ほんやが あります。There is a large bookstore on the 5th floor.,Hon ya
 647,まいあさ,毎朝,every morning,time,毎朝 コーヒーを ２はい のみます。I drink two cups of coffee every morning.,Ma i asa
 648,まいげつ/まいつき,毎月,every month,time,毎月 ホンコンに しゅっちょうします。I go on a business trip to Hong Kong every month.,Ma i getsu/Maitsuki
 649,まいしゅう,毎週,every week,time,毎週 げつようびに ジムに いきます。I I go to the gym in my neighborhood every week.,Ma i Shuu
@@ -654,22 +654,22 @@ order,hiragana,kanji,meaning,category,example,romaji
 652,まいばん,毎ばん,every night,time,毎ばん １じかんぐらい ゲームをします。I play games for about an hour every night.,Maiban
 653,まえ,前,front,direction,"駅の前の コンビニで かいました。I bought it at a convenience store in front of the station. before, いつも しごとの前に コーヒーを のみます。I always drink coffee before work.",Ma e
 654,まがります,,turn,direction,２つめの かどを みぎに まがります。Turn right at the second corner.,Magarimasu
-655,まずい,,"nasty, bad-tasting",adj,このりょうりは ほんとうに まずいです。This dish is really bad.,Mazui
+655,まずい,,"nasty, bad-tasting",adjadv,このりょうりは ほんとうに まずいです。This dish is really bad.,Mazui
 656,また,,again,atomic,"じゃ、また らいしゅう！ Then, see you next week!",Mata
 657,まだ,,"still, yet",atomic,"「もう おわりましたか」「まだです」""Have you finished yet?""""Not yet.""",Mada
-658,まち,,town,obj,わたしたちは このまちが すきです。We like this town.,Machi
+658,まち,,town,places,わたしたちは このまちが すきです。We like this town.,Machi
 659,まちます,,wait,verb,ここで  タクシーを まちます。I'll wait for a taxi here.,Machimasu
-660,まっすぐ,,straight [na-adj.],adj,このみちを 100mぐらい まっすぐ いきます。Go straight on this road for about 100m.,Massugu
-661,マッチ,,match,obj,たぶん うちに マッチは ありません。There is probably no match at home.,Matchi
-662,まど,,window,obj,このまどを あけても いいですか。Is it okay to open this window?,Mado
-663,まるい,,round [i-adj.],adj,まるいテーブルをかいたいです。I want to buy a round table.,Marui
+660,まっすぐ,,straight [na-adj.],adjadv,このみちを 100mぐらい まっすぐ いきます。Go straight on this road for about 100m.,Massugu
+661,マッチ,,match,man made,たぶん うちに マッチは ありません。There is probably no match at home.,Matchi
+662,まど,,window,home,このまどを あけても いいですか。Is it okay to open this window?,Mado
+663,まるい,,round [i-adj.],adjadv,まるいテーブルをかいたいです。I want to buy a round table.,Marui
 664,まん,万,ten thousand,unit,"このタブレットは 5万えんで かいました。I bought this tablet for 50,000 yen.",Ma n
-665,まんねんひつ,,fountain pen,obj,たかい まんねんひつを ３ぼん もっています。I have three expensive fountain pens.,Mannen hitsu
-666,みがきます,,"polish, brush",obj,しょくじのあとで はを みがきます。I will brush after the meal.,Migakimasu
+665,まんねんひつ,,fountain pen,stationery,たかい まんねんひつを ３ぼん もっています。I have three expensive fountain pens.,Mannen hitsu
+666,みがきます,,"polish, brush",verb,しょくじのあとで はを みがきます。I will brush after the meal.,Migakimasu
 667,みぎ,右,right,direction,つぎの かどを 右に まがります。Turn right at the next corner.,Migi
-668,みじかい,,short [i-adj.],adj,みじかいえいがを３ぼん みました。I watched 3 short movies.,Mijikai
+668,みじかい,,short [i-adj.],adjadv,みじかいえいがを３ぼん みました。I watched 3 short movies.,Mijikai
 669,みず,水,water,nature,つめたい水を ください。Please give me cold water.,Mizu
-670,みせ,店,store,obj,この店の やきとりは さいこうです。The yakitori in this shop is the best.,Mise
+670,みせ,店,store,places,この店の やきとりは さいこうです。The yakitori in this shop is the best.,Mise
 671,みせます,見せます,show,verb,いりぐちで チケットを 見せます。I will show them the ticket at the entrance.,Misemasu
 672,みち,道,way,direction,この道を まっすぐ いってください。Please go straight on this road.,Michi
 673,みっか,三日,"the third day of month, three days",unit,きょうは 三日です。Today is the 3rd.,Mi ka
@@ -681,123 +681,123 @@ order,hiragana,kanji,meaning,category,example,romaji
 679,みんな,,"everyone, everything",people,これは みんな 100えんです。This is all 100 yen.,Minna
 680,むいか,六日,the sixth day of the month,unit,きょうは 六日です。Today is the 6th.,Mui ka
 681,むこう,,over there,direction,だんせいの おてあらいは むこうです。Men's restrooms are over there.,Mukou
-682,むずかしい,,difficult [i-adj.],adj,このもんだいは とても むずかしいです。This question is very difficult.,Muzukashii
+682,むずかしい,,difficult [i-adj.],adjadv,このもんだいは とても むずかしいです。This question is very difficult.,Muzukashii
 683,むっつ,六つ,six,unit,その ちいさい パンを 六つ ください。Please give me six of those little breads.,Muttsu
 684,め,目,eye,body,わたしは 目が あまり よくないです。My eyes are not very good.,Me
 685,メートル,,meter,unit,ここから えきまで 100メートルぐらいです。It is about 100 meters from here to Eki.,Meetoru
-686,めがね,,glasses,obj,ポケットの なかに めがねが あります。I have glasses in my pocket.,Megane
-687,メモ,,memo,obj,バッグの なかに メモが あります。There is a note in my bag.,Memo
+686,めがね,,glasses,home,ポケットの なかに めがねが あります。I have glasses in my pocket.,Megane
+687,メモ,,memo,stationery,バッグの なかに メモが あります。There is a note in my bag.,Memo
 688,メモします,,make a note,verb,メモしてもいいですか。Can I make a note?,Memo shimasu
 689,もう,,"already, yet",atomic,もう おわりました。It's already over.,Mou
 690,もう～,,... more,atomic,もういちど ゆっくり いってください。Please say slowly again.,Mou~
 691,もく,木,Thursday = もくようび。,time,5がつ13にち（木）  May 13th (Thursday).,Moku
 692,もくようび,木よう日,Thursday,time,木よう日に どこかで あいませんか。Would you like to meet somewhere on Thursday?,Moku youbi
-693,もしもし,,hello (telephone),slang,"もしもし、さとうですが、…。Hello, this is Sato ....",Moshimoshi
-694,もちろん,,of course,slang,はい、もちろん。Yes of course.,Mochiron
+693,もしもし,,hello (telephone),sentence,"もしもし、さとうですが、…。Hello, this is Sato ....",Moshimoshi
+694,もちろん,,of course,sentence,はい、もちろん。Yes of course.,Mochiron
 695,もちます,,"have, hold, carry",verb,バッグを もちましょうか。Shall I carry your bag?,Mochimasu
 696,もっていきます,,take (something) （もってきます。= bring (something)）,verb,パーティーに なにを もっていきますか。What are you going to take to the party?,Motte ikimasu
-697,もっと,,more,slang,もっと おおきい こえで はなしてください。Please speak louder.,Motto
-698,もの,,"object, thing",obj,いちばん いいものを えらんでください。Please choose the best one.,Mono
+697,もっと,,more,sentence,もっと おおきい こえで はなしてください。Please speak louder.,Motto
+698,もの,,"object, thing",intangible,いちばん いいものを えらんでください。Please choose the best one.,Mono
 699,もらいます,,receive,verb,ともだちに プレゼントを もらいました。I got a present from my friend.,Moraimasu
-700,もん,,gate,obj,あそこの もんから はいってください。Please enter from the gate over there.,Mon
-701,もんだい,,question,obj,これは むずかしいもんだいです。This is a difficult question.,Mondai
-702,もんだいようし,,question sheet,obj,まだ もんだいようしを みないでください。Don't look at the question paper yet.,Mon da iyoushi
-703,もんだいれい,,sample question,obj,これは N5のもんだいれいです。This is an example of an N5 question.,Mondairei
-704,やおや,,vegetable store,obj,ちかくの やおやで くだものを かいました。I bought some fruits at a nearby greengrocer.,Yaoya
-705,やさい,,vegetable,obj,まいにち やさいを たべます。I eat vegetables every day.,Yasai
-706,やさしい,,"easy, kind/nice/sweet/gentle [i-adj.]",adj,このテストは やさしいです。This test is easy. かれは とても やさしいです。He is very kind.,Yasashii
-707,やじるし,,arrow,obj,あそこに あかい やじるしが あります。There is a red arrow over there.,Yajirushi
-708,やすい,安い,"cheap, inexpensive",adj,このみせの ランチは 安いですが、おいしいです。Lunch at this shop is cheap but delicious.,Yasui
-709,やすみ,休み,"holiday, vacation",obj,"あしたは 休みですから、かいものにいきます。I'm off tomorrow, so I'm going shopping.",Yasumi
-710,やすみます,休みます,"have a day off, rest, be absent",adj,"あしたから １しゅうかん 休みます。I will take a week off from tomorrow. つかれましたから、すこしやすみます。I'm tired, so I'll take a break.",Yasumimasu
+700,もん,,gate,man made,あそこの もんから はいってください。Please enter from the gate over there.,Mon
+701,もんだい,,question,intangible,これは むずかしいもんだいです。This is a difficult question.,Mondai
+702,もんだいようし,,question sheet,stationery,まだ もんだいようしを みないでください。Don't look at the question paper yet.,Mon da iyoushi
+703,もんだいれい,,sample question,intangible,これは N5のもんだいれいです。This is an example of an N5 question.,Mondairei
+704,やおや,,vegetable store,places,ちかくの やおやで くだものを かいました。I bought some fruits at a nearby greengrocer.,Yaoya
+705,やさい,,vegetable,food,まいにち やさいを たべます。I eat vegetables every day.,Yasai
+706,やさしい,,"easy, kind/nice/sweet/gentle [i-adj.]",adjadv,このテストは やさしいです。This test is easy. かれは とても やさしいです。He is very kind.,Yasashii
+707,やじるし,,arrow,man made,あそこに あかい やじるしが あります。There is a red arrow over there.,Yajirushi
+708,やすい,安い,"cheap, inexpensive",adjadv,このみせの ランチは 安いですが、おいしいです。Lunch at this shop is cheap but delicious.,Yasui
+709,やすみ,休み,"holiday, vacation",activity,"あしたは 休みですから、かいものにいきます。I'm off tomorrow, so I'm going shopping.",Yasumi
+710,やすみます,休みます,"have a day off, rest, be absent",adjadv,"あしたから １しゅうかん 休みます。I will take a week off from tomorrow. つかれましたから、すこしやすみます。I'm tired, so I'll take a break.",Yasumimasu
 711,やっつ,八つ,eight,unit,このドーナツを 八つ ください。Please give me eight of these donuts.,Yattsu
 712,やま,山,mountain,nature,しゅうまつに たかい やまに のぼりました。I climbed a high mountain on the weekend.,Yama
 713,やります,,do,verb,そのしごとは あとで わたしが やります。I will do the work later.,Yarimasu
 714,ゆうがた,,early evening,time,"なつでも ゆうがたは すずしいです。Even in the summer, it is cool in the evening.",Yuugata
-715,ゆうびんきょく,,post office,obj,ゆうびんきょくにはあまり いきません。I don't go to the post office very often.,Yuubin kyoku
-716,ゆうめい,有名,famous [na-adj.],adj,これは すごく有名なアニメです。This is a very famous anime.,Yuumei
+715,ゆうびんきょく,,post office,places,ゆうびんきょくにはあまり いきません。I don't go to the post office very often.,Yuubin kyoku
+716,ゆうめい,有名,famous [na-adj.],adjadv,これは すごく有名なアニメです。This is a very famous anime.,Yuumei
 717,ゆき,,snow,nature,"ふゆは たくさん ゆきが ふります。In winter, there are many snowfalls.",Yuki
-718,ゆっくり(と),,slowly,adj,もうすこし ゆっくり はなしてください。Please speak a little more slowly.,Yukkuri (to)
+718,ゆっくり(と),,slowly,adjadv,もうすこし ゆっくり はなしてください。Please speak a little more slowly.,Yukkuri (to)
 719,ようか,八日,"the eight day of the month, eight days",unit,"きょうは 八日、きんようびです。Today is the 8th, Friday.",You ka
-720,ようふく,,(western) clothes,obj,ともだちのたんじょうびにようふくを あげました。I gave clothes to my friend's birthday.,Youfuku
+720,ようふく,,(western) clothes,places,ともだちのたんじょうびにようふくを あげました。I gave clothes to my friend's birthday.,Youfuku
 721,よく,,often,time,よく カフェで しごとを します。I often work at a nearby cafe.,Yoku
 722,よこ,,the side,direction,テレビの よこに スイッチが あります。There is a switch next to the TV.,Yoko
 723,よっつ,四つ,four,unit,アイスコーヒーを 四つ ください。Please give me four iced coffees.,Yottsu
 724,よびます,,"call, invite",verb,おみせの ひとを よびましょう。Let's call the shop staff.,Yobimasu
 725,よみます,読みます,read,verb,むすめは よく ほんを 読みます。My daughter often reads books.,Yomimasu
 726,よる,夜,night,time,あしたの夜 カフェで ともだちに あいます。I'll see my friends at the cafe tomorrow night.,Yoru
-727,ラーメン,,"ramen, noodle",obj,ときどき ラーメンを たべます。I eat ramen sometimes.,Raamen
+727,ラーメン,,"ramen, noodle",food,ときどき ラーメンを たべます。I eat ramen sometimes.,Raamen
 728,らいげつ,来月,next month,time,たぶん 来月 シンガポールに いきます。Maybe I'm going to Singapore next month.,Rai getsu
 729,らいしゅう,来週,next week,time,来週は とても いそがしいです。I will be very busy next week.,Raishuu
 730,らいねん,来年,next year,time,来年 けっこんします。I'm getting married next year.,Rai nen
-731,ラジオ,,radio,obj,いまは ほとんど ラジオを ききません。I rarely listen to the radio now.,Rajio
-732,りっぱ,,"good, fine, fine-looking, splendid, magnificent [na-adj.]",adj,あのひとは とても りっぱなひとです。That person is a very good person.,Rippa
+731,ラジオ,,radio,man made,いまは ほとんど ラジオを ききません。I rarely listen to the radio now.,Rajio
+732,りっぱ,,"good, fine, fine-looking, splendid, magnificent [na-adj.]",adjadv,あのひとは とても りっぱなひとです。That person is a very good person.,Rippa
 733,りゅうがくせい,,student studying abroad,people,リンダさんは りゅうがくせいです。Linda is an international student.,Ryuu ga ku sei
 734,りょうしん,,parents,people,りょうしんは ハワイに すんでいます。My parents live in Hawaii.,Ryoushi n
-735,りょうり,,cooking,obj,よく りょうりを します。I cook often.,Ryouri
-736,りょこうがいしゃ,,travel agency,obj,かれは りょこうがいしゃにつとめています。He works for a travel agency.,Ryokou ga isha
+735,りょうり,,cooking,activity,よく りょうりを します。I cook often.,Ryouri
+736,りょこうがいしゃ,,travel agency,intangible,かれは りょこうがいしゃにつとめています。He works for a travel agency.,Ryokou ga isha
 737,りょこうします,,travel,verb,なつやすみに ともだちと りょこうします。I travel with friends for summer vacation.,Ryokou shimasu
-738,りんご,,apple,obj,ネットで りんごを たくさん かいました。I bought a lot of apples online.,Ringo
-739,れい,,example,obj,もうすこし れいを おしえてください。Please give me a few more examples.,Rei
-740,れいぞうこ,,refrigerator,obj,れいぞうこの なかに ビールが たくさん あります。There is a lot of beer in the fridge.,Reizouko
-741,レコード,,record,obj,わたしの うちに レコードは ありません。There are no records in my house.,Rekoodo
-742,レストラン,,restaurant,obj,このレストランは とても おいしいです。This restaurant has really good food.,Resutoran
-743,れんしゅう,,practice,obj,れんしゅうは とても たいせつです。Practice is very important.,Renshuu
+738,りんご,,apple,food,ネットで りんごを たくさん かいました。I bought a lot of apples online.,Ringo
+739,れい,,example,intangible,もうすこし れいを おしえてください。Please give me a few more examples.,Rei
+740,れいぞうこ,,refrigerator,home,れいぞうこの なかに ビールが たくさん あります。There is a lot of beer in the fridge.,Reizouko
+741,レコード,,record,man made,わたしの うちに レコードは ありません。There are no records in my house.,Rekoodo
+742,レストラン,,restaurant,places,このレストランは とても おいしいです。This restaurant has really good food.,Resutoran
+743,れんしゅう,,practice,activity,れんしゅうは とても たいせつです。Practice is very important.,Renshuu
 744,れんしゅうします,,practice,verb,うちで もっと れんしゅうしてください。Please practice more at home.,Renshuu shimasu
 745,ろく,六,six,unit,"このタブレットは 六まんえんぐらいでした。This tablet cost about 60,000 yen.",Roku
 746,ろっぽん,六本,six (long objects),unit,コーラを 六本 ください。Please give me six colas.,Roppon
-747,ワイシャツ(Yシャツ),,business shirt (white shirt),obj,ワイシャツは あまり きません。I don't wear shirts very often.,Waishatsu (Y shatsu)
-748,わかい,,young [i-adj.],adj,ははは ちちより ５さい わかいです。My mother is 5 years younger than my father.,Wakai
+747,ワイシャツ(Yシャツ),,business shirt (white shirt),wearables,ワイシャツは あまり きません。I don't wear shirts very often.,Waishatsu (Y shatsu)
+748,わかい,,young [i-adj.],adjadv,ははは ちちより ５さい わかいです。My mother is 5 years younger than my father.,Wakai
 749,わかります,,"understand, know",verb,にほんごが わかりますか。Do you understand Japanese?,Wakarimasu
 750,わすれます,,forget,verb,また パスワードをわすれました。I forgot my password again.,Wasuremasu
 751,わたくし(very formal),私,I,atomic,私は ABC Company の さとうです。I'm Sato from ABC Company.,Watakushi (very formal)
 752,わたし,私,I,atomic,私は にほんごを べんきょうしています。I'm studying Japanese.,Watashi
 753,わたします,,hand over,verb,これから しゅくだいを わたします。I will give you homework from now on.,Watashi masu
 754,わたります,,cross,verb,おうだんほどうを わたりましょう。Let's cross the pedestrian crossing.,Watarimasu
-755,わるい,,bad [i-adj.],adj,わたしは めが わるいです。I have bad eyesight.,Warui
-756,あ,,"Ah!, Oh!",slang,,A
-757,ああ,,Ah!,slang,,Aa
-758,あの,,"Well, Let me see.",slang,,Ano
-759,あのう,,"Excuse me., Well, Let me see.",slang,,Ano u
-760,ありがとうございます。,,Thank you very much.,slang,,Arigatou gozaimasu.
-761,いいえ。,,No,slang,,Iie.
-762,いえ。,,No,slang,,Ie.
-763,いただきます。,,Let's eat! (saying this before having a meal.),slang,,Itadakimasu.
-764,いってきます。,,"I am going., I am leaving.",slang,,Itte kimasu.
-765,いらっしゃいませ。,,"May I help you? (at restaurant, shop)",slang,,Irasshaimase.
-766,うーん,,"Well, Let me see.",slang,,Uun
-767,え,,Oh! = えっ。,slang,,E
-768,ええ,,Yes.,slang,,Ee
-769,えー,,"Well, Let me see.",slang,,Ee
-770,えっ,,Oh! = え。,slang,,E
-771,おげんきで。,,Take care of yourself.,slang,,Ogenki de.
-772,おねがいします。,,Please.,slang,,Onegai shimasu.
-773,おはようございます。,,Good morning.,slang,,Ohayou gozaimasu.
-774,おやすみなさい。,,Good night.,slang,,Oyasumi nasai.
-775,ください。,,Please give me.,slang,,Kudasai.
-776,ごちそうさまでした。,,I've enjoyed my meal very much. Thank you. (saying this after having a meal.),slang,,Gochisousama deshita.
-777,こちらこそ。,,"It is me, not you that ...",slang,,Kochira koso.
-778,ごめんください。,,"Hello!, May I come in?",slang,,Gomen kudasai.
-779,ごめんなさい。,,Sorry.,slang,,Gomen nasai.
-780,こんにちは。,,"Good morning., Good afternoon., Hello.",slang,,Konnichiha.
-781,こんばんは。,,Good evening.,slang,,Konbanha.
-782,さあ…,,Well ...,slang,,Saa...
-783,さようなら。,,Goodbye.,slang,,Sayounara.
-784,しつれいしました。,,I am sorry. (I am sorry to have been rude.),slang,,Shitsurei shimashita.
-785,しつれいします。,,Excuse me.,slang,,Shitsurei shimasu.
-786,じゃ,,"then, well, well then, if so, in the case.",slang,,Ja
-787,じゃあ,,"then, well, well then, if so, in the case.",slang,,Jaa
-788,すみません。,,Excuse me.,slang,,Sumimasen.
-789,そうしましょう。,,Let's do it.,slang,,Sou shimashou.
-790,そうです。,,That's right.,slang,,Sou desu.
-791,そうですか。,,I see.,slang,,Sou desu ka.
-792,そうですね。,,"Oh right., Well ...",slang,,Sou desu ne.
-793,ただいま。,,"I'm home., I'm back.",slang,,Tadaima.
-794,では、また。,,"Well then, see you again.",slang,,"De wa, mata."
-795,どういたしまして。,,"You are welcome., Not at all.",slang,,Dou itashimashite.
-796,どうぞ。,,Please.,slang,,Douzo.
-797,どうも。,,Thanks.,slang,,Dou mo.
-798,どうもありがとう。,,Thanks a lot.,slang,,Dou mo arigatou.
-799,はい。,,Yes.,slang,,Hai.
-800,はじめまして。,,Nice to see you.,slang,,Hajimemashite.
-801,よろしく。,,(Please favor me.),slang,,Yoroshiku.
+755,わるい,,bad [i-adj.],adjadv,わたしは めが わるいです。I have bad eyesight.,Warui
+756,あ,,"Ah!, Oh!",sentence,,A
+757,ああ,,Ah!,sentence,,Aa
+758,あの,,"Well, Let me see.",sentence,,Ano
+759,あのう,,"Excuse me., Well, Let me see.",sentence,,Ano u
+760,ありがとうございます。,,Thank you very much.,sentence,,Arigatou gozaimasu.
+761,いいえ。,,No,sentence,,Iie.
+762,いえ。,,No,sentence,,Ie.
+763,いただきます。,,Let's eat! (saying this before having a meal.),sentence,,Itadakimasu.
+764,いってきます。,,"I am going., I am leaving.",sentence,,Itte kimasu.
+765,いらっしゃいませ。,,"May I help you? (at restaurant, shop)",sentence,,Irasshaimase.
+766,うーん,,"Well, Let me see.",sentence,,Uun
+767,え,,Oh! = えっ。,sentence,,E
+768,ええ,,Yes.,sentence,,Ee
+769,えー,,"Well, Let me see.",sentence,,Ee
+770,えっ,,Oh! = え。,sentence,,E
+771,おげんきで。,,Take care of yourself.,sentence,,Ogenki de.
+772,おねがいします。,,Please.,sentence,,Onegai shimasu.
+773,おはようございます。,,Good morning.,sentence,,Ohayou gozaimasu.
+774,おやすみなさい。,,Good night.,sentence,,Oyasumi nasai.
+775,ください。,,Please give me.,sentence,,Kudasai.
+776,ごちそうさまでした。,,I've enjoyed my meal very much. Thank you. (saying this after having a meal.),sentence,,Gochisousama deshita.
+777,こちらこそ。,,"It is me, not you that ...",sentence,,Kochira koso.
+778,ごめんください。,,"Hello!, May I come in?",sentence,,Gomen kudasai.
+779,ごめんなさい。,,Sorry.,sentence,,Gomen nasai.
+780,こんにちは。,,"Good morning., Good afternoon., Hello.",sentence,,Konnichiha.
+781,こんばんは。,,Good evening.,sentence,,Konbanha.
+782,さあ…,,Well ...,sentence,,Saa...
+783,さようなら。,,Goodbye.,sentence,,Sayounara.
+784,しつれいしました。,,I am sorry. (I am sorry to have been rude.),sentence,,Shitsurei shimashita.
+785,しつれいします。,,Excuse me.,sentence,,Shitsurei shimasu.
+786,じゃ,,"then, well, well then, if so, in the case.",sentence,,Ja
+787,じゃあ,,"then, well, well then, if so, in the case.",sentence,,Jaa
+788,すみません。,,Excuse me.,sentence,,Sumimasen.
+789,そうしましょう。,,Let's do it.,sentence,,Sou shimashou.
+790,そうです。,,That's right.,sentence,,Sou desu.
+791,そうですか。,,I see.,sentence,,Sou desu ka.
+792,そうですね。,,"Oh right., Well ...",sentence,,Sou desu ne.
+793,ただいま。,,"I'm home., I'm back.",sentence,,Tadaima.
+794,では、また。,,"Well then, see you again.",sentence,,"De wa, mata."
+795,どういたしまして。,,"You are welcome., Not at all.",sentence,,Dou itashimashite.
+796,どうぞ。,,Please.,sentence,,Douzo.
+797,どうも。,,Thanks.,sentence,,Dou mo.
+798,どうもありがとう。,,Thanks a lot.,sentence,,Dou mo arigatou.
+799,はい。,,Yes.,sentence,,Hai.
+800,はじめまして。,,Nice to see you.,sentence,,Hajimemashite.
+801,よろしく。,,(Please favor me.),sentence,,Yoroshiku.
