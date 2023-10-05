@@ -1,15 +1,22 @@
-use std::error::Error;
-use std::str::FromStr;
-// use std::path::PathBuf;
+pub mod category;
 
+use std::str::FromStr;
+use std::error::Error;
+use std::fmt;
+
+use rand::seq::SliceRandom;
 use clap::{Parser, Subcommand};
-use serde::de::{self, Deserializer, Unexpected};
 use serde::Deserialize;
+use inquire::{
+    MultiSelect, list_option::ListOption, validator::Validation
+};
+
+use category::Category;
 
 #[derive(Parser)]
 #[command(author, version)]
 #[command(name = "Japanki")]
-#[command(about = "Japanki")]
+#[command(about = "Learn Japanese N5 vocabularies 👹")]
 #[command(long_about = None)]
 #[command(next_line_help = true)]
 struct Cli {
@@ -25,82 +32,26 @@ enum Commands {
     Quiz { category: Vec<String> },
 }
 
-#[derive(Debug, Clone, Deserialize)]
-enum Category {
-    Unit,
-    Atomic,
-    Time,
-    People,
-    Places,
-    Verb,
-    Adjadv,
-    Color,
-    Direction,
-    Nature,
-    Food,
-    Body,
-    Home,
-    Intangible,
-    Activity,
-    Wearables,
-    ManMade,
-    Stationery,
-    Transport,
-    Sentence,
-}
-
-impl std::str::FromStr for Category {
-    type Err = ();
-
-    fn from_str(s: &str) -> Result<Self, Self::Err> {
-        match s {
-            "unit" => Ok(Category::Unit),
-            "atomic" => Ok(Category::Atomic),
-            "time" => Ok(Category::Time),
-            "people" => Ok(Category::People),
-            "places" => Ok(Category::Places),
-            "verb" => Ok(Category::Verb),
-            "adjadv" => Ok(Category::Adjadv),
-            "color" => Ok(Category::Color),
-            "direction" => Ok(Category::Direction),
-            "nature" => Ok(Category::Nature),
-            "food" => Ok(Category::Food),
-            "body" => Ok(Category::Body),
-            "home" => Ok(Category::Home),
-            "intangible" => Ok(Category::Intangible),
-            "activity" => Ok(Category::Activity),
-            "wearables" => Ok(Category::Wearables),
-            "man made" => Ok(Category::ManMade),
-            "stationery" => Ok(Category::Stationery),
-            "transport" => Ok(Category::Transport),
-            "sentence" => Ok(Category::Sentence),
-            _ => Err(()),
-        }
-    }
-}
-
-
-fn from_str<'de, D>(deserializer: D) -> Result<Category, D::Error>
-where
-    D: Deserializer<'de>,
-{
-    let s: String = Deserialize::deserialize(deserializer)?;
-    Category::from_str(&s).map_err(|_| de::Error::invalid_value(Unexpected::Str(&s), &"a valid category"))
-}
-
-
-#[derive(Debug, Deserialize)]
+#[derive(Debug, Deserialize, PartialEq)]
 #[allow(dead_code)]
 struct Vocab {
     order: u16,
     hiragana: String,
     kanji: Option<String>,
     meaning: String,
-    #[serde(deserialize_with = "from_str")]
     category: Category,
     example: Option<String>,
     romaji: String,
 }
+
+impl fmt::Display for Vocab {
+    fn fmt(&self, f: &mut fmt::Formatter) -> fmt::Result {
+        write!(f, "[{}] | {} | ", self.category, self.order)?;
+        write!(f, "{} | {:?} | {}", self.hiragana, self.kanji, self.romaji)?;
+        Ok(())
+    }
+}
+
 
 fn read_file() -> Result<Vec<Vocab>, Box<dyn Error>> {
     let mut rdr = csv::Reader::from_path("data/words.csv")?;
@@ -112,26 +63,55 @@ fn read_file() -> Result<Vec<Vocab>, Box<dyn Error>> {
     Ok(vocabs)
 }
 
+fn start_showing(cat: Vec<Category>) {
+    println!("Reading in vocab database...");
+    let vocabs = read_file();
+    match vocabs {
+        Ok(vocabs) => {
+            let filtered_vocabs: Vec<Vocab> = vocabs
+                .into_iter()
+                .filter(|word| cat.contains(&word.category))
+                .collect();
+            // println!("{}", filtered_vocabs.len());
+            // for entry in filtered_vocabs {
+                // println!("{:}", entry)
+            // }
+
+            // show a vocab randomly
+            println!("{}", filtered_vocabs.choose(&mut rand::thread_rng()).unwrap());
+        },
+        Err(_) => panic!("Read file error!"),
+    };
+}
+
 fn main() {
     let cli = Cli::parse();
 
-    println!("Reading in vocab database...");
-    let _ = read_file();
-
     match &cli.command {
         Commands::Show { category } => {
-            let mut cats = Vec::new();
-            for cat in category{
-                cats.push(Category::from_str(cat).unwrap());
+            let mut cats;
+            if category.last().is_none() {
+                let validator = |a: &[ListOption<&Category>]| {
+                    match a.is_empty() {
+                        true => Ok(Validation::Invalid("Please select at least one category.".into())),
+                        false => Ok(Validation::Valid),
+                    }
+                };
+                cats = MultiSelect::new("Select categories:", Category::VARIANTS.to_vec())
+                    .with_validator(validator)
+                    .prompt()
+                    .unwrap();
+            } else {
+                cats = Vec::new();
+                for cat in category{
+                    cats.push(Category::from_str(cat).unwrap());
+                }
             }
-            println!("cmd {:?}", cats)
+            println!("Selected: {:?}", cats);
+            start_showing(cats);
         }
         Commands::Quiz { category } => {
-            let mut cats = Vec::new();
-            for cat in category{
-                cats.push(Category::from_str(cat).unwrap());
-            }
-            println!("cmd {:?}", cats)
+            println!("{:?}, Not implemented yet :(", category)
         }
     }
 }
