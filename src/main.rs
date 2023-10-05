@@ -7,7 +7,10 @@ use serde::de::{self, Deserializer, Unexpected};
 use serde::Deserialize;
 
 #[derive(Parser)]
-#[command(author, version, about = "Learn Japanese vocabularies", long_about = None)]
+#[command(author, version)]
+#[command(name = "Japanki")]
+#[command(about = "Japanki")]
+#[command(long_about = None)]
 #[command(next_line_help = true)]
 struct Cli {
     #[command(subcommand)]
@@ -16,7 +19,9 @@ struct Cli {
 
 #[derive(Subcommand)]
 enum Commands {
+    /// Show vocabularies
     Show { category: Vec<String> },
+    /// Do quiz
     Quiz { category: Vec<String> },
 }
 
@@ -108,10 +113,11 @@ fn read_file() -> Result<Vec<Vocab>, Box<dyn Error>> {
 }
 
 fn main() {
+    let cli = Cli::parse();
+
     println!("Reading in vocab database...");
     let _ = read_file();
 
-    let cli = Cli::parse();
     match &cli.command {
         Commands::Show { category } => {
             let mut cats = Vec::new();
