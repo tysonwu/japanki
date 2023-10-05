@@ -47,7 +47,8 @@ struct Vocab {
 impl fmt::Display for Vocab {
     fn fmt(&self, f: &mut fmt::Formatter) -> fmt::Result {
         write!(f, "[{}] | {} | ", self.category, self.order)?;
-        write!(f, "{} | {:?} | {}", self.hiragana, self.kanji, self.romaji)?;
+        write!(f, "{} | {:?} | {} | ", self.hiragana, self.kanji, self.romaji)?;
+        write!(f, "{}", self.meaning)?;
         Ok(())
     }
 }
