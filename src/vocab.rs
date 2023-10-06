@@ -52,13 +52,12 @@ impl fmt::Display for Vocab {
         }
 
         write!(f, " | {}", self.romaji)?;
-        write!(f, "\nMeaning: {}", self.meaning)?;
+        writeln!(f, "\nMeaning: {}", self.meaning)?;
 
         let val = self.example.as_ref();
         if let Some(val) = val {
-            write!(f, "\nExample: {}", val)?;
+            writeln!(f, "Example: {}", val)?;
         }
-        writeln!(f)?;
         Ok(())
     }
 }
@@ -103,7 +102,7 @@ impl<'a> fmt::Display for MaskedVocab<'a> {
             write!(f, " | {}", self.vocab.romaji)?;
         }
 
-        writeln!(f)?;
+        writeln!(f, "\nMeaning: {}", self.vocab.meaning)?;
         Ok(())
     }
 }

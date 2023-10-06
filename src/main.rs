@@ -22,7 +22,6 @@ use vocab::{
 #[command(about = "Learn Japanese N5 vocabularies 🇯🇵")]
 #[command(long_about = None)]
 #[command(next_line_help = true)]
-
 struct Cli {
     #[command(subcommand)]
     command: Commands,
