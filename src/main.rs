@@ -1,24 +1,25 @@
-pub mod category;
+pub mod vocab;
 
 use std::str::FromStr;
 use std::error::Error;
-use std::fmt;
 
 use rand::seq::SliceRandom;
 use clap::{Parser, Subcommand};
-use serde::Deserialize;
+
+use strum::IntoEnumIterator;
 use inquire::{
-    MultiSelect, list_option::ListOption, validator::Validation
+    MultiSelect, Confirm, list_option::ListOption, validator::Validation
 };
 
-use category::Category;
+use vocab::{Vocab, Category};
 
 #[derive(Parser)]
 #[command(author, version)]
 #[command(name = "Japanki")]
-#[command(about = "Learn Japanese N5 vocabularies 👹")]
+#[command(about = "Learn Japanese N5 vocabularies 🇯🇵")]
 #[command(long_about = None)]
 #[command(next_line_help = true)]
+
 struct Cli {
     #[command(subcommand)]
     command: Commands,
@@ -32,27 +33,6 @@ enum Commands {
     Quiz { category: Vec<String> },
 }
 
-#[derive(Debug, Deserialize, PartialEq)]
-#[allow(dead_code)]
-struct Vocab {
-    order: u16,
-    hiragana: String,
-    kanji: Option<String>,
-    meaning: String,
-    category: Category,
-    example: Option<String>,
-    romaji: String,
-}
-
-impl fmt::Display for Vocab {
-    fn fmt(&self, f: &mut fmt::Formatter) -> fmt::Result {
-        write!(f, "[{}] | {} | ", self.category, self.order)?;
-        write!(f, "{} | {:?} | {} | ", self.hiragana, self.kanji, self.romaji)?;
-        write!(f, "{}", self.meaning)?;
-        Ok(())
-    }
-}
-
 
 fn read_file() -> Result<Vec<Vocab>, Box<dyn Error>> {
     let mut rdr = csv::Reader::from_path("data/words.csv")?;
@@ -64,25 +44,22 @@ fn read_file() -> Result<Vec<Vocab>, Box<dyn Error>> {
     Ok(vocabs)
 }
 
-fn start_showing(cat: Vec<Category>) {
-    println!("Reading in vocab database...");
-    let vocabs = read_file();
-    match vocabs {
-        Ok(vocabs) => {
-            let filtered_vocabs: Vec<Vocab> = vocabs
-                .into_iter()
-                .filter(|word| cat.contains(&word.category))
-                .collect();
-            // println!("{}", filtered_vocabs.len());
-            // for entry in filtered_vocabs {
-                // println!("{:}", entry)
-            // }
+fn show_random_loop(vocabs: Vec<Vocab>) {
+    // show a vocab randomly one time every loop
+    loop {
+        println!("{}", vocabs.choose(&mut rand::thread_rng()).unwrap());
+        let next = Confirm::new("Next")
+            .with_default(true)
+            .with_help_message("Press [Enter] to continue")
+            .prompt();
 
-            // show a vocab randomly
-            println!("{}", filtered_vocabs.choose(&mut rand::thread_rng()).unwrap());
-        },
-        Err(_) => panic!("Read file error!"),
-    };
+        match next {
+            Ok(true) => {},
+            _ => {
+                break
+            },
+        }
+    }
 }
 
 fn main() {
@@ -98,8 +75,9 @@ fn main() {
                         false => Ok(Validation::Valid),
                     }
                 };
-                cats = MultiSelect::new("Select categories:", Category::VARIANTS.to_vec())
+                cats = MultiSelect::new("Select categories:", Category::iter().collect())
                     .with_validator(validator)
+                    .with_page_size(100)
                     .prompt()
                     .unwrap();
             } else {
@@ -109,7 +87,24 @@ fn main() {
                 }
             }
             println!("Selected: {:?}", cats);
-            start_showing(cats);
+
+            // read file
+            println!("Reading in vocab database...");
+            let db = read_file();
+            match db {
+                Ok(vocabs) => {
+                    let filtered_vocabs: Vec<Vocab> = vocabs
+                        .into_iter()
+                        .filter(|word| cats.contains(&word.category))
+                        .collect();
+                    // println!("{}", filtered_vocabs.len());
+                    // for entry in filtered_vocabs {
+                        // println!("{:}", entry)
+                    // }
+                    show_random_loop(filtered_vocabs);
+                },
+                Err(_) => panic!("Read file error!"),
+            }
         }
         Commands::Quiz { category } => {
             println!("{:?}, Not implemented yet :(", category)
