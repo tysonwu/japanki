@@ -5,6 +5,7 @@ use std::str::FromStr;
 use std::fs;
 use std::path::Path;
 use std::process;
+use std::collections::HashMap;
 
 use rand::seq::SliceRandom;
 use clap::Parser;
@@ -48,12 +49,14 @@ enum Cli {
 
 #[derive(Parser, Debug)]
 enum ShowSubCommand {
+    /// Show all categories
     All {
         #[clap(long)]
         no_progress: bool,
         #[clap(long)]
         kanji: bool,
     },
+    /// Show selected categories
     Some {
         category: Vec<String>,
         #[clap(long)]
@@ -65,6 +68,7 @@ enum ShowSubCommand {
 
 #[derive(Parser, Debug)]
 enum QuizSubCommand {
+    /// Quiz all categories
     All {
         #[clap(long)]
         no_progress: bool,
@@ -73,6 +77,7 @@ enum QuizSubCommand {
         #[clap(long)]
         meaning: bool,
     },
+    /// Quiz some categories
     Some {
         category: Vec<String>,
         #[clap(long)]
@@ -86,14 +91,19 @@ enum QuizSubCommand {
 
 #[derive(Parser, Debug)]
 enum ProgressSubCommand {
+    /// Show current level for each categories
     Now,
+    /// Level up categories
     Up,
+    /// Level down categories
+    Down,
+    /// Reset all categories to lowest level
     Reset,
 }
 
-
 fn show_random_loop(vocabs: Vec<Vocab>) {
     // show a vocab randomly one time every loop
+    println!("{} possible vocabs", vocabs.len());
     let formatter = &|ans| match ans {
         true => "▷".to_owned(),
         false => "Exit".to_owned(),
@@ -101,7 +111,7 @@ fn show_random_loop(vocabs: Vec<Vocab>) {
     loop {
         let choice = vocabs.choose(&mut rand::thread_rng()).unwrap();
         println!("{}", choice);
-        let next = Confirm::new("Show next")
+        let next = Confirm::new("Continue")
             .with_default(true)
             .with_formatter(formatter)
             .with_help_message("Press [Enter] to continue")
@@ -130,6 +140,7 @@ fn clean_romaji(s: &str) -> String {
 
 fn quiz_random_loop(vocabs: Vec<Vocab>, masked_fields: Vec<MaskableVocabField>, answer_field: MaskableVocabField) {
     // quiz a vocab randomly one time every loop
+    println!("{} possible vocabs", vocabs.len());
     let formatter = &|ans| match ans {
         true => "▷".to_owned(),
         false => "Exit".to_owned(),
@@ -149,7 +160,7 @@ fn quiz_random_loop(vocabs: Vec<Vocab>, masked_fields: Vec<MaskableVocabField>, 
                         process::exit(1);
                     },
                 }
-                println!("🔎 Answer is {}", &unmasked_vocab.meaning);
+                println!("🔎 Answer | {}", &unmasked_vocab.meaning);
             },
             MaskableVocabField::Romaji => {
                 let ans = Text::new("Romaji is: ").prompt();
@@ -162,9 +173,12 @@ fn quiz_random_loop(vocabs: Vec<Vocab>, masked_fields: Vec<MaskableVocabField>, 
                 }
                 let model_ans = clean_romaji(&unmasked_vocab.romaji);
                 if model_ans == ans.unwrap() {
-                    println!("✅ Correct! It is {}", &unmasked_vocab.romaji);
+                    print!("✅ Correct! It is ");
+                    unmasked_vocab.short_display();
                 } else {
-                    println!("❌ Oops! It should be {}", &unmasked_vocab.romaji);
+                    print!("❌ Oops! It should be ");
+                    unmasked_vocab.short_display();
+                    let _ = Text::new("✏️ Correction: ").prompt();
                 }
             },
             _ => {
@@ -174,7 +188,7 @@ fn quiz_random_loop(vocabs: Vec<Vocab>, masked_fields: Vec<MaskableVocabField>, 
             }
         }
 
-        let next = Confirm::new("Next?")
+        let next = Confirm::new("Next question?")
             .with_default(true)
             .with_formatter(formatter)
             .with_help_message("Press [Enter] to continue")
@@ -227,10 +241,10 @@ fn process_cats_input(category: &Vec<String>) -> Vec<Category> {
             match c {
                 Ok(v) => cats.push(v),
                 Err(_) => {
-                    println!("Bad category input!");
-                    println!("Available categories:");
+                    eprintln!("Bad category input!");
+                    eprintln!("Available categories:");
                     for c in Category::iter(){
-                        println!("- {}", c);
+                        eprintln!("- {}", c);
                     }
                     process::exit(1);
                 }
@@ -241,7 +255,7 @@ fn process_cats_input(category: &Vec<String>) -> Vec<Category> {
     cats
 }
 
-fn filter_db(db: Vec<Vocab>, cats: Vec<Category>, current_progress: &Progress, kanji: &bool) -> Vec<Vocab> {
+fn filter_db(db: Vec<Vocab>, cats: Vec<Category>, current_progress: &HashMap<Category, Progress>, kanji: &bool, ignore_progress: &bool) -> Vec<Vocab> {
     let filtered_vocabs: Vec<Vocab> = db
         .into_iter()
         .filter(|word| cats.contains(&word.category))
@@ -253,36 +267,42 @@ fn filter_db(db: Vec<Vocab>, cats: Vec<Category>, current_progress: &Progress, k
             }
         })
         .filter(|word| -> bool {
-            word.level <= current_progress.level
+            if *ignore_progress {
+                true
+            } else {
+                word.level <= current_progress.get(&word.category).unwrap().level
+            }
         })
         .collect();
     filtered_vocabs
 }
 
-fn read_progress(file_name: &str) -> Result<Progress, Error> {
+fn read_progress(file_name: &str) -> Result<HashMap<Category, Progress>, Error> {
     let home = home_dir().expect("Could not get home directory");
     let file_path = home.join(Path::new(file_name));
     let content = fs::read_to_string(file_path).expect("Could not read file");
-    let config: Progress = serde_yaml::from_str(&content)?;
+    let config: HashMap<Category, Progress> = serde_yaml::from_str(&content)?;
     Ok(config)
 }
 
-fn write_progress(progress: Progress, file_name: &str) {
+fn write_progress(progress: &HashMap<Category, Progress>, file_name: &str) {
     let home = home_dir().expect("Could not get home directory");
     let file_path = home.join(Path::new(file_name));
-    let content = serde_yaml::to_string(&progress).expect("Could not serialize data");
+    let content = serde_yaml::to_string(progress).expect("Could not serialize data");
     fs::write(file_path, content).expect("Could not write file");
 }
 
-fn read_file() -> Vec<Vocab> {
+fn read_file(file_name: &str) -> Vec<Vocab> {
     println!("Reading in vocab database...");
-    let mut rdr = csv::Reader::from_path("data/words.csv").unwrap();
+    let home = home_dir().expect("Could not get home directory");
+    let file_path = home.join(Path::new(file_name));
+    let mut rdr = csv::Reader::from_path(file_path).unwrap();
     let mut vocabs = Vec::new();
     for result in rdr.deserialize() {
         match result {
             Ok(vocab) => {vocabs.push(vocab)},
             Err(_) => {
-                println!("Error reading file. Exit.");
+                eprintln!("Error reading file. Exit.");
                 process::exit(1);
             }
         }
@@ -290,37 +310,43 @@ fn read_file() -> Vec<Vocab> {
     vocabs
 }
 
+fn display_progress(current_progress: &HashMap<Category, Progress>) {
+    println!("=== Current progress ===");
+    for cat in Category::iter() {
+        println!("{}:   {} out of 10", cat, current_progress.get(&cat).unwrap().level);
+    }
+}
+
 fn main() {
     let cli = Cli::parse();
+    let db_path: &str = "./.japanki/words.csv";
+    let config_path: &str = "./.japanki/progress.yaml";
 
     // read progress from dotfile at home dir
-    let mut current_progress: Progress = read_progress("./.japanki/progress.yaml").expect("Could not parse progress file.");
+    let mut current_progress: HashMap<Category, Progress> = read_progress(config_path).expect("Could not parse progress file.");
 
     match &cli {
         Cli::Show { subcmd } => {
-            let db = read_file();
+            let db = read_file(db_path);
             match subcmd {
                 ShowSubCommand::All { no_progress, kanji } => {
-                    if no_progress.to_owned() { current_progress = Progress{ level: 10 } };
                     let cats: Vec<Category> = Category::iter().collect();
-                    let filtered_vocabs: Vec<Vocab> = filter_db(db, cats, &current_progress, kanji);
+                    let filtered_vocabs: Vec<Vocab> = filter_db(db, cats, &current_progress, kanji, no_progress);
                     show_random_loop(filtered_vocabs)
                 },
                 ShowSubCommand::Some { category, no_progress, kanji } => {
-                    if no_progress.to_owned() { current_progress = Progress{ level: 10 } };
                     let cats = process_cats_input(category);
-                    let filtered_vocabs: Vec<Vocab> = filter_db(db, cats, &current_progress, kanji);
+                    let filtered_vocabs: Vec<Vocab> = filter_db(db, cats, &current_progress, kanji, no_progress);
                     show_random_loop(filtered_vocabs);
                 },
             }
         },
         Cli::Quiz { subcmd } => {
-            let db = read_file();
+            let db = read_file(db_path);
             match subcmd {
                 QuizSubCommand::All { no_progress, kanji, meaning } => {
-                    if no_progress.to_owned() { current_progress = Progress{ level: 10 } };
                     let cats: Vec<Category> = Category::iter().collect();
-                    let filtered_vocabs: Vec<Vocab> = filter_db(db, cats, &current_progress, kanji);
+                    let filtered_vocabs: Vec<Vocab> = filter_db(db, cats, &current_progress, kanji, no_progress);
                     if meaning.to_owned() {
                         quiz_random_meaning(filtered_vocabs);
                     } else {
@@ -328,9 +354,8 @@ fn main() {
                     }
                 },
                 QuizSubCommand::Some { category, no_progress, kanji, meaning } => {
-                    if no_progress.to_owned() { current_progress = Progress{ level: 10 } };
                     let cats = process_cats_input(category);
-                    let filtered_vocabs: Vec<Vocab> = filter_db(db, cats, &current_progress, kanji);
+                    let filtered_vocabs: Vec<Vocab> = filter_db(db, cats, &current_progress, kanji, no_progress);
                     if meaning.to_owned() {
                         quiz_random_meaning(filtered_vocabs);
                     } else {
@@ -342,16 +367,29 @@ fn main() {
         Cli::Progress { subcmd } => {
             match subcmd {
                 ProgressSubCommand::Now => {
-                    println!("Current progress: {} out of 10", &current_progress.level);
+                    display_progress(&current_progress)
                 },
                 ProgressSubCommand::Up => {
-                    let new_prog = current_progress.level + 1;
-                    if new_prog > 10 {
-                        println!("You have achieved the highest level already!")
-                    } else {
-                        write_progress(Progress { level: new_prog }, "./.japanki/progress.yaml");
-                        println!("Level up progress to {}.", new_prog);
+                    let cats = MultiSelect::new("Select categories to level up:", Category::iter().collect())
+                        .with_page_size(100)
+                        .prompt()
+                        .unwrap();
+                    for cat in cats {
+                        current_progress.get_mut(&cat).unwrap().up();
                     }
+                    display_progress(&current_progress);
+                    write_progress(&current_progress, config_path);
+                },
+                ProgressSubCommand::Down => {
+                    let cats = MultiSelect::new("Select categories to level up:", Category::iter().collect())
+                        .with_page_size(100)
+                        .prompt()
+                        .unwrap();
+                    for cat in cats {
+                        current_progress.get_mut(&cat).unwrap().down();
+                    }
+                    display_progress(&current_progress);
+                    write_progress(&current_progress, config_path);
                 },
                 ProgressSubCommand::Reset => {
                     let confirmation = Confirm::new("Are you sure to reset progress? Progress will be lost.")
@@ -361,14 +399,17 @@ fn main() {
 
                     match confirmation {
                         Ok(true) => {
-                            write_progress(Progress { level: 1 }, "./.japanki/progress.yaml");
-                            println!("Reset progress to 1.");
+                            for cat in Category::iter() {
+                                current_progress.get_mut(&cat).unwrap().reset();
+                            }
+                            display_progress(&current_progress);
+                            write_progress(&current_progress, config_path);
                         }
                         Ok(false) => {
                             println!("Exit. さよなら！");
                         }
                         _ => {
-                            println!("Some error. Exit.");
+                            eprintln!("Some error. Exit.");
                             process::exit(1);
                         },
                     }

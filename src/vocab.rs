@@ -1,9 +1,9 @@
 use std::fmt;
 
 use strum_macros::{EnumIter, EnumString, Display};
-use serde::Deserialize;
+use serde::{Serialize, Deserialize};
 
-#[derive(Debug, Copy, Clone, PartialEq, Display, EnumIter, EnumString, Deserialize)]
+#[derive(Debug, Copy, Clone, PartialEq, Eq, Hash, Display, EnumIter, EnumString, Serialize, Deserialize)]
 #[serde(rename_all = "lowercase")]
 #[strum(ascii_case_insensitive)]
 pub enum Category {
@@ -63,6 +63,19 @@ impl fmt::Display for Vocab {
     }
 }
 
+impl Vocab {
+    pub fn short_display(&self){
+        print!("{}", self.hiragana);
+
+        let val = self.kanji.as_ref();
+        if let Some(val) = val {
+            print!(" | {}", val);
+        }
+
+        println!(" | {}", self.romaji);
+    }
+}
+
 
 #[derive(Debug, Clone, PartialEq)]
 pub enum MaskableVocabField {
@@ -84,7 +97,7 @@ impl<'a, 'b> fmt::Display for MaskedVocab<'a, 'b> {
         writeln!(f, "====== {} {} | Level {} =====", self.vocab.category, self.vocab.order, self.vocab.level)?;
 
         if self.masked_field.contains(&MaskableVocabField::Hiragana) {
-            write!(f, "Hiragana: ?????")?;
+            write!(f, "Hiragana: ???")?;
         } else {
             write!(f, "{}", self.vocab.hiragana)?;
         }
@@ -92,20 +105,20 @@ impl<'a, 'b> fmt::Display for MaskedVocab<'a, 'b> {
         let val = self.vocab.kanji.as_ref();
         if let Some(val) = val {
             if self.masked_field.contains(&MaskableVocabField::Kanji) {
-                write!(f, " | Kanji: ?????")?;
+                write!(f, " | Kanji: ???")?;
             } else {
                 write!(f, " | {}", val)?;
             }
         }
 
         if self.masked_field.contains(&MaskableVocabField::Romaji) {
-            write!(f, " | Romaji: ?????")?;
+            write!(f, " | Romaji: ???")?;
         } else {
             write!(f, " | {}", self.vocab.romaji)?;
         }
 
         if self.masked_field.contains(&MaskableVocabField::Meaning) {
-            writeln!(f, "\nMeaning: ?????")?;
+            writeln!(f, "\nMeaning: ???")?;
         } else {
             writeln!(f, "\nMeaning: {}", self.vocab.meaning)?;
         }
