@@ -1,9 +1,4 @@
-// use std::collections::HashMap;
-
 use serde::{Deserialize, Serialize};
-// use strum::IntoEnumIterator;
-
-// use crate::vocab::Category;
 
 #[derive(Debug, Deserialize, Serialize, Clone, PartialEq)]
 pub struct Progress {
@@ -37,12 +32,3 @@ impl Default for Progress {
         Progress { level: 10 }
     }
 }
-
-
-// pub fn get_progress() -> HashMap<Category, Progress> {
-//     let mutmap = HashMap::new();
-//     for cat in Category::iter() {
-//         map.insert(cat, Progress{ level: 1 })
-//     }
-//     map
-// }
