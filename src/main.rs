@@ -353,8 +353,8 @@ fn main() {
                         println!("You have achieved the highest level already!")
                     } else {
                         write_progress(Progress { level: new_prog }, "./.japanki/progress.yaml");
+                        println!("Level up progress to {}.", new_prog);
                     }
-                    println!("Level up progress to {}.", new_prog);
                 },
                 ProgressSubCommand::Reset => {
                     write_progress(Progress { level: 1 }, "./.japanki/progress.yaml");
