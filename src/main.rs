@@ -152,7 +152,7 @@ fn quiz_random_loop(vocabs: Vec<Vocab>, masked_fields: Vec<MaskableVocabField>, 
 
         match answer_field {
             MaskableVocabField::Meaning => {
-                let ans = Text::new("Meaning is: ").prompt();
+                let ans = Text::new("Meaning is:").prompt();
                 match ans {
                     Ok(_) => (),
                     Err(_) => {
@@ -161,9 +161,10 @@ fn quiz_random_loop(vocabs: Vec<Vocab>, masked_fields: Vec<MaskableVocabField>, 
                     },
                 }
                 println!("🔎 Answer | {}", &unmasked_vocab.meaning);
+                println!("\n");
             },
             MaskableVocabField::Romaji => {
-                let ans = Text::new("Romaji is: ").prompt();
+                let ans = Text::new("Romaji is:").prompt();
                 match ans {
                     Ok(_) => (),
                     Err(_) => {
@@ -178,8 +179,17 @@ fn quiz_random_loop(vocabs: Vec<Vocab>, masked_fields: Vec<MaskableVocabField>, 
                 } else {
                     print!("❌ Oops! It should be ");
                     unmasked_vocab.short_display();
-                    let _ = Text::new("✏️ Correction: ").prompt();
+                    println!();
+                    let corr = Text::new("✏️ Correction:").prompt();
+                    match corr {
+                        Ok(_) => (),
+                        Err(_) => {
+                            println!("Exit. さよなら！");
+                            process::exit(1);
+                        },
+                    }
                 }
+                println!();
             },
             _ => {
                 // unhandled maskable vocab field
@@ -201,7 +211,7 @@ fn quiz_random_loop(vocabs: Vec<Vocab>, masked_fields: Vec<MaskableVocabField>, 
                 break
             }
             _ => {
-                println!("Some error. Exit.");
+                println!("Exit. さよなら！");
                 process::exit(1);
             },
         }
