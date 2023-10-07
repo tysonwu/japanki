@@ -296,9 +296,6 @@ fn main() {
     // read progress from dotfile at home dir
     let mut current_progress: Progress = read_progress("./.japanki/progress.yaml").expect("Could not parse progress file.");
 
-    // let mut current_progress: HashMap<String, u16> = HashMap::new();
-    // current_progress.insert(String::from("max"), 100);
-
     match &cli {
         Cli::Show { subcmd } => {
             let db = read_file();
