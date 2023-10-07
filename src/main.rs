@@ -357,8 +357,24 @@ fn main() {
                     }
                 },
                 ProgressSubCommand::Reset => {
-                    write_progress(Progress { level: 1 }, "./.japanki/progress.yaml");
-                    println!("Reset progress to 1.");
+                    let confirmation = Confirm::new("Are you sure to reset progress? Progress will be lost.")
+                        .with_default(true)
+                        .with_help_message("Press [Enter] to reset")
+                        .prompt();
+
+                    match confirmation {
+                        Ok(true) => {
+                            write_progress(Progress { level: 1 }, "./.japanki/progress.yaml");
+                            println!("Reset progress to 1.");
+                        }
+                        Ok(false) => {
+                            println!("Exit. さよなら！");
+                        }
+                        _ => {
+                            println!("Some error. Exit.");
+                            process::exit(1);
+                        },
+                    }
                 },
             }
         },
