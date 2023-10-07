@@ -32,18 +32,19 @@ pub enum Category {
 #[derive(Debug, Clone, PartialEq, Deserialize)]
 pub struct Vocab {
     pub order: u16,
+    pub level: u8,
     pub hiragana: String,
     pub kanji: Option<String>,
-    meaning: String,
+    pub meaning: String,
     pub category: Category,
-    example: Option<String>,
+    pub example: Option<String>,
     pub romaji: String,
 }
 
 impl fmt::Display for Vocab {
     fn fmt(&self, f: &mut fmt::Formatter) -> fmt::Result {
         writeln!(f)?;
-        writeln!(f, "====== {} {} =====", self.category, self.order)?;
+        writeln!(f, "====== {} {} | Level {} =====", self.category, self.order, self.level)?;
         write!(f, "{}", self.hiragana)?;
 
         let val = self.kanji.as_ref();
@@ -66,23 +67,24 @@ impl fmt::Display for Vocab {
 #[derive(Debug, Clone, PartialEq)]
 pub enum MaskableVocabField {
     Hiragana,
-    Kanji,
     Romaji,
+    Kanji,
+    Meaning,
 }
 
 #[derive(Debug, Clone, PartialEq)]
-pub struct MaskedVocab<'a> {
+pub struct MaskedVocab<'a, 'b> {
     pub vocab: &'a Vocab,
-    pub masked_field: Vec<MaskableVocabField>,
+    pub masked_field: &'b Vec<MaskableVocabField>,
 }
 
-impl<'a> fmt::Display for MaskedVocab<'a> {
+impl<'a, 'b> fmt::Display for MaskedVocab<'a, 'b> {
     fn fmt(&self, f: &mut fmt::Formatter) -> fmt::Result {
         writeln!(f)?;
-        writeln!(f, "====== {} {} =====", self.vocab.category, self.vocab.order)?;
+        writeln!(f, "====== {} {} | Level {} =====", self.vocab.category, self.vocab.order, self.vocab.level)?;
 
         if self.masked_field.contains(&MaskableVocabField::Hiragana) {
-            write!(f, "?????")?;
+            write!(f, "Hiragana: ?????")?;
         } else {
             write!(f, "{}", self.vocab.hiragana)?;
         }
@@ -90,19 +92,23 @@ impl<'a> fmt::Display for MaskedVocab<'a> {
         let val = self.vocab.kanji.as_ref();
         if let Some(val) = val {
             if self.masked_field.contains(&MaskableVocabField::Kanji) {
-                write!(f, " | ?????")?;
+                write!(f, " | Kanji: ?????")?;
             } else {
                 write!(f, " | {}", val)?;
             }
         }
 
         if self.masked_field.contains(&MaskableVocabField::Romaji) {
-            write!(f, " | ?????")?;
+            write!(f, " | Romaji: ?????")?;
         } else {
             write!(f, " | {}", self.vocab.romaji)?;
         }
 
-        writeln!(f, "\nMeaning: {}", self.vocab.meaning)?;
+        if self.masked_field.contains(&MaskableVocabField::Meaning) {
+            writeln!(f, "\nMeaning: ?????")?;
+        } else {
+            writeln!(f, "\nMeaning: {}", self.vocab.meaning)?;
+        }
         Ok(())
     }
 }
