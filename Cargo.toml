@@ -16,3 +16,4 @@ serde = { version = "1.0.188", features = ["serde_derive"] }
 serde_yaml = "0.9.25"
 strum = "0.25.0"
 strum_macros = "0.25.2"
+tabled = "0.14.0"

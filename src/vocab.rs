@@ -2,6 +2,7 @@ use std::fmt;
 
 use strum_macros::{EnumIter, EnumString, Display};
 use serde::{Serialize, Deserialize};
+use tabled::Tabled;
 
 #[derive(Debug, Copy, Clone, PartialEq, Eq, Hash, Display, EnumIter, EnumString, Serialize, Deserialize)]
 #[serde(rename_all = "lowercase")]
@@ -29,16 +30,26 @@ pub enum Category {
     Sentence,
 }
 
+fn display_option(o: &Option<String>) -> String {
+    match o {
+        Some(s) => String::from(s),
+        None => String::from("-"),
+    }
+}
+
 #[derive(Debug, Clone, PartialEq, Deserialize)]
+#[derive(Tabled)]
 pub struct Vocab {
-    pub order: u16,
     pub level: u8,
-    pub hiragana: String,
-    pub kanji: Option<String>,
-    pub meaning: String,
+    pub order: u16,
     pub category: Category,
-    pub example: Option<String>,
+    pub hiragana: String,
+    #[tabled(display_with = "display_option")]
+    pub kanji: Option<String>,
     pub romaji: String,
+    pub meaning: String,
+    #[tabled(display_with = "display_option")]
+    pub example: Option<String>,
 }
 
 impl fmt::Display for Vocab {
@@ -64,15 +75,27 @@ impl fmt::Display for Vocab {
 }
 
 impl Vocab {
-    pub fn short_display(&self){
+    pub fn short_display(&self) {
         print!("{}", self.hiragana);
-
         let val = self.kanji.as_ref();
         if let Some(val) = val {
             print!(" | {}", val);
         }
-
         println!(" | {}", self.romaji);
+    }
+
+    pub fn line_display(&self) {
+        println!(
+            "{} {} | Level {} || {} | {} | {} | {} | {}",
+            self.category,
+            self.order,
+            self.level,
+            self.hiragana,
+            self.kanji.as_ref().unwrap_or(&String::from(" - ")),
+            self.romaji,
+            self.meaning,
+            self.example.as_ref().unwrap_or(&String::from(" - ")),
+        )
     }
 }
 

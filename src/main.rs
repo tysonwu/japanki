@@ -15,6 +15,8 @@ use inquire::{
 };
 use dirs::home_dir;
 use serde_yaml::Error;
+use tabled::Table;
+use tabled::settings::Style;
 
 use vocab::{
     Vocab, Category, MaskableVocabField, MaskedVocab
@@ -45,6 +47,11 @@ enum Cli {
     },
     /// List out all categories
     List,
+    /// Display
+    Display {
+        #[clap(subcommand)]
+        subcmd: DisplaySubCommand
+    }
 }
 
 #[derive(Parser, Debug)]
@@ -101,32 +108,35 @@ enum ProgressSubCommand {
     Reset,
 }
 
+#[derive(Parser, Debug)]
+enum DisplaySubCommand {
+    /// Display all vocabs in current progress
+    All {
+        #[clap(long)]
+        kanji: bool,
+    },
+    /// Display all vocabs in current progress and selected categories
+    Some {
+        category: Vec<String>,
+        #[clap(long)]
+        kanji: bool,
+    },
+}
+
 fn show_random_loop(vocabs: Vec<Vocab>) {
     // show a vocab randomly one time every loop
     println!("{} possible vocabs", vocabs.len());
-    let formatter = &|ans| match ans {
-        true => "▷".to_owned(),
-        false => "Exit".to_owned(),
-    };
     loop {
         let choice = vocabs.choose(&mut rand::thread_rng()).unwrap();
         println!("{}", choice);
-        let next = Confirm::new("Continue")
-            .with_default(true)
-            .with_formatter(formatter)
-            .with_help_message("Press [Enter] to continue")
-            .prompt();
 
+        let next = confirmation_prompt("Continue");
         match next {
-            Ok(true) => {},
-            Ok(false) => {
+            true => {},
+            false => {
                 println!("Exit. さよなら！");
                 break
             }
-            _ => {
-                println!("Exit. さよなら！");
-                process::exit(1);
-            },
         }
     }
 }
@@ -141,10 +151,6 @@ fn clean_romaji(s: &str) -> String {
 fn quiz_random_loop(vocabs: Vec<Vocab>, masked_fields: Vec<MaskableVocabField>, answer_field: MaskableVocabField) {
     // quiz a vocab randomly one time every loop
     println!("{} possible vocabs", vocabs.len());
-    let formatter = &|ans| match ans {
-        true => "▷".to_owned(),
-        false => "Exit".to_owned(),
-    };
     loop {
         let unmasked_vocab = vocabs.choose(&mut rand::thread_rng()).unwrap();
         let choice = MaskedVocab { vocab: unmasked_vocab, masked_field: &masked_fields };
@@ -191,29 +197,16 @@ fn quiz_random_loop(vocabs: Vec<Vocab>, masked_fields: Vec<MaskableVocabField>, 
                 }
                 println!();
             },
-            _ => {
-                // unhandled maskable vocab field
-                println!("Some error. Exit.");
-                process::exit(1);
-            }
+            _ => { unreachable!() },
         }
 
-        let next = Confirm::new("Next question?")
-            .with_default(true)
-            .with_formatter(formatter)
-            .with_help_message("Press [Enter] to continue")
-            .prompt();
-
+        let next = confirmation_prompt("Next question");
         match next {
-            Ok(true) => {},
-            Ok(false) => {
+            true => {},
+            false => {
                 println!("Exit. さよなら！");
                 break
             }
-            _ => {
-                println!("Exit. さよなら！");
-                process::exit(1);
-            },
         }
     }
 }
@@ -233,17 +226,7 @@ fn quiz_random_romaji(vocabs: Vec<Vocab>) {
 fn process_cats_input(category: &Vec<String>) -> Vec<Category> {
     let mut cats;
     if category.last().is_none() {
-        let validator = |a: &[ListOption<&Category>]| {
-            match a.is_empty() {
-                true => Ok(Validation::Invalid("Please select at least one category.".into())),
-                false => Ok(Validation::Valid),
-            }
-        };
-        cats = MultiSelect::new("Select categories:", Category::iter().collect())
-            .with_validator(validator)
-            .with_page_size(100)
-            .prompt()
-            .unwrap();
+        cats = multiselect_prompt("Select categories:");
     } else {
         cats = Vec::new();
         for cat in category{
@@ -261,8 +244,40 @@ fn process_cats_input(category: &Vec<String>) -> Vec<Category> {
             }
         }
     }
-    println!("Selected: {:?}", cats);
     cats
+}
+
+fn multiselect_prompt(display: &str) -> Vec<Category> {
+    let validator = |a: &[ListOption<&Category>]| {
+        match a.is_empty() {
+            true => Ok(Validation::Invalid("Please select at least one category.".into())),
+            false => Ok(Validation::Valid),
+        }
+    };
+    let cats = MultiSelect::new(display, Category::iter().collect())
+        .with_page_size(Category::iter().len()) // always show all at once
+        .with_validator(validator)
+        .prompt();
+    match cats {
+        Ok(v) => { v },
+        Err(_) => { process::exit(1) },
+    }
+}
+
+fn confirmation_prompt(display: &str) -> bool {
+    let formatter = &|ans| match ans {
+        true => "▷".to_owned(),
+        false => "Exit".to_owned(),
+    };
+    let confirmation = Confirm::new(display)
+        .with_default(true)
+        .with_formatter(formatter)
+        .with_help_message("Press [Enter] to reset")
+        .prompt();
+    match confirmation {
+        Ok(v) => { v },
+        Err(_) => { process::exit(1) },
+    }
 }
 
 fn filter_db(db: Vec<Vocab>, cats: Vec<Category>, current_progress: &HashMap<Category, Progress>, kanji: &bool, ignore_progress: &bool) -> Vec<Vocab> {
@@ -322,9 +337,16 @@ fn read_file(file_name: &str) -> Vec<Vocab> {
 
 fn display_progress(current_progress: &HashMap<Category, Progress>) {
     println!("=== Current progress ===");
+
     for cat in Category::iter() {
-        println!("{}:   {} out of 10", cat, current_progress.get(&cat).unwrap().level);
+        println!("{:<12}  Level {:>2} / 10", cat, current_progress.get(&cat).unwrap().level);
     }
+}
+
+fn line_display_vocabs(vocabs: Vec<Vocab>) {
+    let mut table = Table::new(vocabs);
+    table.with(Style::rounded());
+    println!("{}", table);
 }
 
 fn main() {
@@ -380,10 +402,7 @@ fn main() {
                     display_progress(&current_progress)
                 },
                 ProgressSubCommand::Up => {
-                    let cats = MultiSelect::new("Select categories to level up:", Category::iter().collect())
-                        .with_page_size(100)
-                        .prompt()
-                        .unwrap();
+                    let cats = multiselect_prompt("Select categories to level up");
                     for cat in cats {
                         current_progress.get_mut(&cat).unwrap().up();
                     }
@@ -391,10 +410,7 @@ fn main() {
                     write_progress(&current_progress, config_path);
                 },
                 ProgressSubCommand::Down => {
-                    let cats = MultiSelect::new("Select categories to level up:", Category::iter().collect())
-                        .with_page_size(100)
-                        .prompt()
-                        .unwrap();
+                    let cats = multiselect_prompt("Select categories to level down");
                     for cat in cats {
                         current_progress.get_mut(&cat).unwrap().down();
                     }
@@ -402,25 +418,17 @@ fn main() {
                     write_progress(&current_progress, config_path);
                 },
                 ProgressSubCommand::Reset => {
-                    let confirmation = Confirm::new("Are you sure to reset progress? Progress will be lost.")
-                        .with_default(true)
-                        .with_help_message("Press [Enter] to reset")
-                        .prompt();
-
+                    let confirmation = confirmation_prompt("Are you sure to reset progress? Progress will be lost.");
                     match confirmation {
-                        Ok(true) => {
+                        true => {
                             for cat in Category::iter() {
                                 current_progress.get_mut(&cat).unwrap().reset();
                             }
                             display_progress(&current_progress);
                             write_progress(&current_progress, config_path);
-                        }
-                        Ok(false) => {
+                        },
+                        false => {
                             println!("Exit. さよなら！");
-                        }
-                        _ => {
-                            eprintln!("Some error. Exit.");
-                            process::exit(1);
                         },
                     }
                 },
@@ -430,6 +438,21 @@ fn main() {
             println!("Available categories:");
             for cat in Category::iter() {
                 println!(" - {:}", cat)
+            }
+        },
+        Cli::Display { subcmd } => {
+            let db = read_file(db_path);
+            match subcmd {
+                DisplaySubCommand::All { kanji } => {
+                    let cats: Vec<Category> = Category::iter().collect();
+                    let filtered_vocabs: Vec<Vocab> = filter_db(db, cats, &current_progress, kanji, &false);
+                    line_display_vocabs(filtered_vocabs);
+                },
+                DisplaySubCommand::Some { category, kanji } => {
+                    let cats = process_cats_input(category);
+                    let filtered_vocabs: Vec<Vocab> = filter_db(db, cats, &current_progress, kanji, &false);
+                    line_display_vocabs(filtered_vocabs);
+                },
             }
         }
     }
