@@ -102,37 +102,37 @@ Verb          Level  1 / 10
 
 #### Example usage
 
-```
+```bash
 japanki list   # list all available categories
 
-Available categories:
- - Unit
- - Atomic
- - Time
- - People
- - Places
- - Verb
- - Adjadv
- - Color
- - Direction
- - Nature
- - Food
- - Body
- - Home
- - Intangible
- - Activity
- - Wearables
- - Manmade
- - Stationery
- - Transport
- - Sentence
+# Available categories:
+#  - Unit
+#  - Atomic
+#  - Time
+#  - People
+#  - Places
+#  - Verb
+#  - Adjadv
+#  - Color
+#  - Direction
+#  - Nature
+#  - Food
+#  - Body
+#  - Home
+#  - Intangible
+#  - Activity
+#  - Wearables
+#  - Manmade
+#  - Stationery
+#  - Transport
+#  - Sentence
 ```
 
 ### Show Japanese vocabularies
 
 #### Example
 
-```{bash}
+```bash
 # show vocabs in all categories
 japanki show all
 
@@ -150,7 +150,7 @@ japanki show some verb time unit --kanji --no-progress
 
 #### Example usage
 
-```{bash}
+```bash
 # quiz with vocabs in all categories
 japanki quiz all
 
@@ -171,7 +171,7 @@ japanki quiz some verb time unit --kanji --no-progress
 
 #### Example usage
 
-```{bash}
+```bash
 # show current levels
 japanki progress now
 
@@ -187,8 +187,11 @@ japanki progress reset
 
 ### Display all vocabs
 
-```{bash}
+```bash
+# display all
 japanki display all
+
+# display selected categories
 japanki display some verb time unit
 ```
 
