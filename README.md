@@ -3,13 +3,39 @@
     <h5>Learn Japanese N5 vocabularies and do quizzes on CLI!</h5>
 </div>
 
+- [Installation](#installation)
+  - [Build from source](#build-from-source)
+- [Introduction](#introduction)
+- [Features and usage](#features-and-usage)
+  - [List catories](#list-catories)
+    - [Example usage](#example-usage)
+  - [Show Japanese vocabularies](#show-japanese-vocabularies)
+    - [Example](#example)
+  - [Quiz yourself](#quiz-yourself)
+    - [Example usage](#example-usage-1)
+  - [Manage study progress](#manage-study-progress)
+    - [Example usage](#example-usage-2)
+  - [Display all vocabs](#display-all-vocabs)
+- [Why doing this?](#why-doing-this)
+- [Preparing the data](#preparing-the-data)
+
+
 ## Installation
 
-> To be written.
+### Build from source
+
+- Clone the repository.
+- Have latest Rust installed, build with `cargo build` and obtain the binary.
+- You will also need to have the vocab csv file and progress .yaml file at `$HOME/.japanki`. Copy `./.japanki` directory in this repo to your home directory.
+
+- `cd` to the binary directory, usually at `./target/debug/`, and run `./japanki` with arguments (see below for usage).
+- Optionally if you wish to have `japanki` installed on system startup, copy the binary to `/usr/local/bin`.
+
+This above steps are outlined by a very simple install script. Run `./install.sh`.
 
 ## Introduction
 
-This simple CLI let's you study and memorize japanese N5 vocabs in terminal, like this:
+- This simple CLI let's you study and memorize japanese N5 vocabs in terminal, like this:
 
 ```
 >> japanki show all
@@ -27,21 +53,54 @@ Example: つかいかたを おしえてください。Please teach me how to us
 ～えん | ～円 | ~ en
 Meaning: ... yen
 Example: これは 10,000円です。This is 10,000 yen.
-
-> Show next ▷
-
-====== Verb 54 | Level 1 =====
-あけます | Akemasu
-Meaning: open
-Example: わたしは ドアをあけます。I open the door.
-
 ...
 
 ```
 
+- Or you can do quiz:
+
+```
+>> japanki quiz all --kanji
+
+====== Unit 0 | Level 1 =====
+Hiragana: ??? | ～駅 | Romaji: ???
+Meaning: ... station
+
+> Romaji is: eki
+✅ Correct! It is ～えき | ～駅 | ~ eki
+
+> Next question ▷
+
+====== Nature 78 | Level 1 =====
+Hiragana: ??? | 雨 | Romaji: ???
+Meaning: rain
+
+> Romaji is: ami
+❌ Oops! It should be あめ | 雨 | Ame
+
+> ✏️ Correction: ame
+```
+
+- You can manage your progress, level up when you are familiar with current sets of vocabs:
+
+```
+>> japanki progress now
+
+=== Current progress ===
+Unit          Level  1 / 10
+Atomic        Level  3 / 10
+Time          Level  2 / 10
+People        Level  4 / 10
+Places        Level  5 / 10
+Verb          Level  1 / 10
+```
+
+
 ## Features and usage
 
 ### List catories
+
+#### Example usage
 
 ```
 japanki list   # list all available categories
@@ -70,34 +129,68 @@ Available categories:
 ```
 
 ### Show Japanese vocabularies
-```
-japanki show all                                          # show vocabs in all categories
-japanki show some verb time unit                          # show within the verb/time/unit category
-japanki show some verb time unit --kanji                  # show vocabs that involves kanji
-japanki show some verb time unit --kanji --no-progress    # no progress checks
+
+#### Example
+
+```{bash}
+# show vocabs in all categories
+japanki show all
+
+# show within the verb/time/unit category
+japanki show some verb time unit
+
+# show vocabs that involves kanji
+japanki show some verb time unit --kanji
+
+# no progress filtering when showing vocabs
+japanki show some verb time unit --kanji --no-progress
 ```
 
-### Quiz yourself by typing some romaji or vocabulary meanings
+### Quiz yourself
 
 #### Example usage
-```
-japanki quiz all                                          # quiz with vocabs in all categories
-japanki quiz some verb time unit                          # quiz within the verb/time/unit category
-japanki quiz some verb time unit --kanji                  # quiz vocabs that involves kanji
-japanki quiz some verb time unit --meaning                # quiz for meaning of vocabs; no model answer checks
-japanki quiz some verb time unit --kanji --no-progress    # no progress checks
+
+```{bash}
+# quiz with vocabs in all categories
+japanki quiz all
+
+# quiz within the verb/time/unit category
+japanki quiz some verb time unit
+
+# quiz vocabs that involves kanji
+japanki quiz some verb time unit --kanji
+
+# quiz for meaning of vocabs; no model answer checks
+japanki quiz some verb time unit --meaning
+
+# no progress filtering when quiz
+japanki quiz some verb time unit --kanji --no-progress
 ```
 
 ### Manage study progress
 
 #### Example usage
-```
-japanki progress now   # show current levels
-japanki progress up    # level up when you are familiar with current level vocabs
-japanki progress down  # level down when you feel bad
-japanki progress reset # reset trackings
+
+```{bash}
+# show current levels
+japanki progress now
+
+# level up when you are familiar with current level vocabs
+japanki progress up
+
+# level down when you feel bad
+japanki progress down
+
+# reset trackings
+japanki progress reset
 ```
 
+### Display all vocabs
+
+```{bash}
+japanki display all
+japanki display some verb time unit
+```
 
 ## Why doing this?
 
