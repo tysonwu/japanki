@@ -197,7 +197,7 @@ japanki display some verb time unit
 
 ## Why doing this?
 
-While there are plenty of resources for learning Japanese, still none of them satisfy my very pedantic requirement:
+While there are plenty of resources for learning Japanese, still, none of them satisfy my very pedantic needs:
 
 - I do not want textbook or videos because the pace is too slow.
 - I do not want to learn vocabs in alphabetical order which most learning app does.

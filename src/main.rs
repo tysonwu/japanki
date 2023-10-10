@@ -114,12 +114,16 @@ enum DisplaySubCommand {
     All {
         #[clap(long)]
         kanji: bool,
+        #[clap(long)]
+        no_progress: bool,
     },
     /// Display all vocabs in current progress and selected categories
     Some {
         category: Vec<String>,
         #[clap(long)]
         kanji: bool,
+        #[clap(long)]
+        no_progress: bool,
     },
 }
 
@@ -443,14 +447,14 @@ fn main() {
         Cli::Display { subcmd } => {
             let db = read_file(db_path);
             match subcmd {
-                DisplaySubCommand::All { kanji } => {
+                DisplaySubCommand::All { kanji, no_progress } => {
                     let cats: Vec<Category> = Category::iter().collect();
-                    let filtered_vocabs: Vec<Vocab> = filter_db(db, cats, &current_progress, kanji, &false);
+                    let filtered_vocabs: Vec<Vocab> = filter_db(db, cats, &current_progress, kanji, no_progress);
                     line_display_vocabs(filtered_vocabs);
                 },
-                DisplaySubCommand::Some { category, kanji } => {
+                DisplaySubCommand::Some { category, kanji, no_progress } => {
                     let cats = process_cats_input(category);
-                    let filtered_vocabs: Vec<Vocab> = filter_db(db, cats, &current_progress, kanji, &false);
+                    let filtered_vocabs: Vec<Vocab> = filter_db(db, cats, &current_progress, kanji, no_progress);
                     line_display_vocabs(filtered_vocabs);
                 },
             }
