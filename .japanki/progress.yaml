@@ -1,40 +1,63 @@
-verb:
+action:
   level: 1
+  max_level: 13
 activity:
   level: 1
-adjadv:
-  level: 1
-people:
-  level: 1
-direction:
-  level: 1
-nature:
-  level: 1
-stationery:
-  level: 1
-time:
-  level: 1
-transport:
-  level: 1
-manmade:
-  level: 1
-color:
-  level: 1
-body:
-  level: 1
-wearables:
-  level: 1
+  max_level: 2
 atomic:
   level: 1
-places:
+  max_level: 5
+body:
   level: 1
-unit:
+  max_level: 1
+color:
   level: 1
-intangible:
+  max_level: 1
+direction:
   level: 1
+  max_level: 3
 food:
   level: 1
+  max_level: 3
 home:
   level: 1
+  max_level: 2
+iadj:
+  level: 1
+  max_level: 6
+intangible:
+  level: 1
+  max_level: 2
+manmade:
+  level: 1
+  max_level: 2
+naadj:
+  level: 1
+  max_level: 2
+nature:
+  level: 1
+  max_level: 2
+people:
+  level: 1
+  max_level: 4
+places:
+  level: 1
+  max_level: 4
 sentence:
   level: 1
+  max_level: 4
+stationery:
+  level: 1
+  max_level: 2
+time:
+  level: 1
+  max_level: 6
+transport:
+  level: 1
+  max_level: 1
+unit:
+  level: 1
+  max_level: 9
+wearables:
+  level: 1
+  max_level: 2

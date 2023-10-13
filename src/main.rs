@@ -341,9 +341,13 @@ fn read_file(file_name: &str) -> Vec<Vocab> {
 
 fn display_progress(current_progress: &HashMap<Category, Progress>) {
     println!("=== Current progress ===");
-
     for cat in Category::iter() {
-        println!("{:<12}  Level {:>2} / 10", cat, current_progress.get(&cat).unwrap().level);
+        println!(
+            "{:<12}  Level {:>2} / {}",
+            cat,
+            current_progress.get(&cat).unwrap().level,
+            current_progress.get(&cat).unwrap().max_level
+        );
     }
 }
 
