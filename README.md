@@ -31,7 +31,7 @@
 - `cd` to the binary directory, usually at `./target/debug/`, and run `./japanki` with arguments (see below for usage).
 - Optionally if you wish to have `japanki` installed on system startup, copy the binary to `/usr/local/bin`.
 
-This above steps are outlined by a very simple install script. Run `./install.sh`.
+This above steps are outlined by a very simple install script. Run `sudo ./install.sh` (Sudo required as it adds to sudo directories).
 
 ## Introduction
 
