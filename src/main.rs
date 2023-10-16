@@ -16,7 +16,7 @@ use inquire::{
 use dirs::home_dir;
 use serde_yaml::Error;
 use tabled::Table;
-use tabled::settings::Style;
+use tabled::settings::{Style, Width, Modify, object::Columns};
 
 use vocab::{
     Vocab, Category, MaskableVocabField, MaskedVocab
@@ -354,6 +354,7 @@ fn display_progress(current_progress: &HashMap<Category, Progress>) {
 fn line_display_vocabs(vocabs: Vec<Vocab>) {
     let mut table = Table::new(vocabs);
     table.with(Style::rounded());
+    table.with(Modify::new(Columns::new(1..)).with(Width::wrap(40).keep_words()));
     println!("{}", table);
 }
 
